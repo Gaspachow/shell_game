@@ -30,13 +30,5 @@ def ascii_computer
 end
 
 def ascii_spaceship
-  "       ___
-   ___/   \\___
-  /   '---'   \\
-  '--_______--'
-       / \\
-      /   \\
-      /\\O/\\
-      / | \\
-      // \\\\ "
+""
 end

@@ -17,9 +17,9 @@
                       (Appuie sur 'q' pour quitter)
 
 
-Tu trouveras ici des informations qui t'aideront pendant toute l'infiltration du vaisseau.
+Tu trouveras ici des informations qui t'aideront pendant toute l'enquête.
 
-En première partie, tu trouveras des indications sur les étapes à effectuer pour détruire le vaisseau.
+En première partie, tu trouveras des indications sur les étapes à effectuer pour retrouver le diamant.
 
 En dernière partie, tu trouveras la liste des commnandes importantes que tu pourras utiliser.
 
@@ -28,11 +28,11 @@ I / LES ETAPES
 
 - Aller dans le dossier `securite` et changer le mot de passe d'au moins un administrateur
 
-- Aller dans le dossier `planetes` et envoyer un mail au analyseurs des deux planetes pour les faire revenir dans le XZ120F.
+- Aller dans le dossier `partenaires` et envoyer un mail au collaborateurs du voleur pour les rassembler à un rendez-vous avec la police.
 
-- Aller dans le dossier `admin` et récupérer le mot de passe qui permettra d'accéder à la gestion du vaisseau.
+- Aller dans le dossier `admin` et récupérer le mot de passe qui permettra d'accéder à la gestion de l'ordinateur du voleur.
 
-- Accéder à la partie `gestion du vaisseau` et faire en sorte de déteriorer les compostants du vaisseau et enfin, le détruire.
+- Accéder à la partie `gestion de l'ordinateur` et trouver ou le voleur se cache ainsi que le diamant, pour enfin envoyer sa position à la police.
 
 
 
@@ -54,7 +54,7 @@ II / LES COMMANDES
   -> ls : affiche l'ensemble des fichiers contenus dans le répertoire indiqué.
 
     * Si l'option "-a" est donnée en paramètre, tous les fichiers du repertoire
-      indiqué vont s'affichier, ainsi que les fichies et dossiers cachés.
+      indiqué vont s'affichier, ainsi que les fichiers et dossiers cachés.
 
   -> cd : change le répertoire en cours d'utilisation pour aller dans le
       repertoire passé en paramètre.
@@ -67,7 +67,7 @@ II / LES COMMANDES
 
     * Pour enregistrer, il faut faire CTRL + X
 
-  -> admin : permet d'acceder à l'espace sécurisé de gestion du vaisseau.
+  -> admin : permet d'acceder à l'espace sécurisé de l'ordinateur du voleur.
 
   -> rm : supprime le fichier passé en paramètre.
 
@@ -79,6 +79,6 @@ II / LES COMMANDES
 
   -> mail : envoie un email au destinataire spécifié en paramètre
 
-  -> status : donne l'état du vaisseau (ne fonctionne que dans la partie gestion du vaisseau.)
+  -> status : donne l'état de sécurité de l'ordinateur (ne fonctionne que dans la partie gestion de l'ordinateur.)
 
-  -> destruction : tente de détruire le vaisseau (ne fonctionne que dans la partie gestion du vaisseau.)
+  -> localisation : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.)

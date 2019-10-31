@@ -2,14 +2,14 @@ class Hint
 
   def infiltrate_computer
     h = "\n\n"
-    h += "💡  Conseil : Pour rentrer dans le système, il faut rajouter ton prénom dans la liste des utilisateurs autorisés !\n"
-    h += "   Pour cela, édite le fichier " + "autorisations".italic + " et rajoute ton prénom !"
+    h += "💡  Conseil : Pour rentrer dans le système, il faut rajouter ton identifiant dans la liste des utilisateurs autorisés !\n"
+    h += "   Pour cela, édite le fichier " + "autorisations".italic + " et rajoute ton identifiant !"
     h += "\n-----------\n"
   end
 
   def rewrite_firstname(name)
     h = "\n\n"
-    h += "💡  Maintenant que tu as ajouté ton prénom (#{name}) à la liste des utilisateurs autorisés, tu peux le retaper pour rentrer dans le système !"
+    h += "💡  Maintenant que tu as ajouté ton identifiant (#{name}) à la liste des utilisateurs autorisés, tu peux le retaper pour rentrer dans le système !"
     h += "\n-----------\n\n"
   end
 

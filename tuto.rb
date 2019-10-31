@@ -24,15 +24,15 @@ class Tuto
     cursor = TTY::Cursor
     ascii_slant = Artii::Base.new(font: 'slant')
     a = Artii::Base.new
-    puts ascii_spaceship
-    puts a.asciify('XZ120F')
-    introduction_str = "Bienvenue sur le système informatique du XZ120F, le plus grand vaisseau alien.\n"
-    introduction_str += "Veuillez vous identifier en inscrivant votre prénom."
+    puts a.asciify('SECURE-NET')
+    introduction_str = "Bienvenue détective,\nJe suis 4LFR3D, l'intelligence artificielle d'assistance aux détectives privés.\n"
+    introduction_str += "Mon programme m'indique que tu souhaites te connecter à l'ordinateur d'un voleur coupable de vol de diamants.\n\n"
+    introduction_str += "Quel identifiant souhaites-tu essayer pour te connecter à son ordinateur?"
     display_letters(introduction_str)
     answer = nil
     puts "\n\n"
     while !answer
-      answer = $prompt.ask("Prénom :") do |q|
+      answer = $prompt.ask("Identifiant :") do |q|
         if answer
           q.modify   :downcase
         end
@@ -64,7 +64,7 @@ class Tuto
     answer = nil
 
     while !answer
-      answer = $prompt.ask("Prénom :") do |q|
+      answer = $prompt.ask("Identifiant :") do |q|
         if answer
           q.modify :downcase
         end

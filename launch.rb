@@ -42,7 +42,7 @@ def display_prompt
 end
 
 def display_letters str, speed=nil
-  speed = speed || (1.0 / 30)
+  speed = speed || (1.0 / 60)
   str.split("").each do |c|
     print c
     sleep(speed)
