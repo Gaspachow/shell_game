@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'artii'
+
+begin
+  a = Artii::CLI.new *ARGV.dup
+  puts a.output
+rescue StandardError => e
+  puts "Something has gone horribly wrong!"
+  puts "Artii says: #{e.message}"
+  # puts e.backtrace
+end

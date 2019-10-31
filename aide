@@ -1,0 +1,84 @@
+                          __________________
+                        .-'  \ _.-''-._ /  '-.
+                      .-/\   .'.      .'.   /\-.
+                    _'/  \.'   '.  .'   './  \'_
+                    :======:======::======:======:
+                    '. '.  \     ''     /  .' .'
+                      '. .  \   :  :   /  . .'
+                        '.'  \  '  '  /  '.'
+                          ':  \:    :/  :'
+                            '. \    / .'
+                              '.\  /.'
+                                '\/'
+
+
+                                AIDE
+
+                      (Appuie sur 'q' pour quitter)
+
+
+Tu trouveras ici des informations qui t'aideront pendant toute l'infiltration du vaisseau.
+
+En première partie, tu trouveras des indications sur les étapes à effectuer pour détruire le vaisseau.
+
+En dernière partie, tu trouveras la liste des commnandes importantes que tu pourras utiliser.
+
+
+I / LES ETAPES
+
+- Aller dans le dossier `securite` et changer le mot de passe d'au moins un administrateur
+
+- Aller dans le dossier `planetes` et envoyer un mail au analyseurs des deux planetes pour les faire revenir dans le XZ120F.
+
+- Aller dans le dossier `admin` et récupérer le mot de passe qui permettra d'accéder à la gestion du vaisseau.
+
+- Accéder à la partie `gestion du vaisseau` et faire en sorte de déteriorer les compostants du vaisseau et enfin, le détruire.
+
+
+
+
+II / LES COMMANDES
+
+  Utilisation des commandes :
+
+       ==================================================================
+      |      commande + paramètre1 + ...(paramètre2 + paramètre3)...    |
+       ==================================================================
+
+
+  -> hint : donne des indices de ce qui devrait être fait dans ce dossier.
+
+  -> cat : affiche sur le terminal le contenu du fichier passé en paramètre.
+
+
+  -> ls : affiche l'ensemble des fichiers contenus dans le répertoire indiqué.
+
+    * Si l'option "-a" est donnée en paramètre, tous les fichiers du repertoire
+      indiqué vont s'affichier, ainsi que les fichies et dossiers cachés.
+
+  -> cd : change le répertoire en cours d'utilisation pour aller dans le
+      repertoire passé en paramètre.
+
+    * Si le chemin ".." est donné en paramètre, le nouveau répertoire
+      sera le repertoire parent (le repertoire précédent).
+
+  -> edit : ouvre l'éditeur de texte pour permettre la modification du
+        fichier passé en paramètre.
+
+    * Pour enregistrer, il faut faire CTRL + X
+
+  -> admin : permet d'acceder à l'espace sécurisé de gestion du vaisseau.
+
+  -> rm : supprime le fichier passé en paramètre.
+
+  -> aide : ouvre le centre d'aide.
+
+  -> chmod : modifie les permissions d'accès du fichier indiqué.
+
+    * Si l'option "+r" est donnée, donne les droits de lecture du fichier.
+
+  -> mail : envoie un email au destinataire spécifié en paramètre
+
+  -> status : donne l'état du vaisseau (ne fonctionne que dans la partie gestion du vaisseau.)
+
+  -> destruction : tente de détruire le vaisseau (ne fonctionne que dans la partie gestion du vaisseau.)
