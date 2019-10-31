@@ -3,7 +3,7 @@ require_relative '_base'
 class PlanetDir < FakeDir
   attr_accessor :emailed, :email
   def initialize
-    @emailed = false
+    @emailed = true # TO CHANGE AGAIN CESAR
   end
 
   def mail args

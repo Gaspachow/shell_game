@@ -50,25 +50,25 @@ def display_letters str, speed=nil
 end
 
 $admins = [
-  {:name=>"Vrezeok", :slug=>"vrezeok", :password=>"90e51a2"},
-  {:name=>"Krerrin", :slug=>"krerrin", :password=>"ff46339"},
-  {:name=>"Vrils", :slug=>"vrils", :password=>"79e1fdc"},
-  {:name=>"Iktoks", :slug=>"iktoks", :password=>"1fb301d"},
-  {:name=>"Daldrar", :slug=>"daldrar", :password=>"597c2ff"},
-  {:name=>"Choldal", :slug=>"choldal", :password=>"d2ee10e"},
-  {:name=>"Ghid", :slug=>"ghid", :password=>"b84142a"},
-  {:name=>"Teivil", :slug=>"teivil", :password=>"23fdbd6"},
-  {:name=>"Ruldeth", :slug=>"ruldeth", :password=>"12fb8d3"},
-  {:name=>"Coknals", :slug=>"coknals", :password=>"c28a979"},
-  {:name=>"Tenqids", :slug=>"tenqids", :password=>"803d086"},
-  {:name=>"Korkeids", :slug=>"korkeids", :password=>"f869410"},
-  {:name=>"Arkrils", :slug=>"arkrils", :password=>"3833b6a"},
-  {:name=>"Ulmae", :slug=>"ulmae", :password=>"55c869c"},
-  {:name=>"Uval", :slug=>"uval", :password=>"d9955a1"},
-  {:name=>"Yudda", :slug=>"yudda", :password=>"f52cabe"},
-  {:name=>"Khoknuts", :slug=>"khoknuts", :password=>"9896128"},
-  {:name=>"Gulxot", :slug=>"gulxot", :password=>"c27d749"},
-  {:name=>"Fodreas", :slug=>"fodreas", :password=>"17e128d"}
+  {:name=>"Chipeur", :slug=>"chipeur", :password=>"90e51a2"},
+  {:name=>"Joker", :slug=>"joker", :password=>"ff46339"},
+  {:name=>"Arist0t3", :slug=>"arist0t3", :password=>"79e1fdc"},
+  {:name=>"Bowser", :slug=>"bowser", :password=>"1fb301d"},
+  {:name=>"Megamind", :slug=>"megamind", :password=>"597c2ff"},
+  {:name=>"Farqu4d", :slug=>"farqu4d", :password=>"d2ee10e"},
+  {:name=>"Mojo", :slug=>"mojo", :password=>"b84142a"},
+  {:name=>"Jojo", :slug=>"jojo", :password=>"23fdbd6"},
+  {:name=>"Dante", :slug=>"dante", :password=>"12fb8d3"},
+  {:name=>"Roger", :slug=>"roger", :password=>"c28a979"},
+  {:name=>"Hercule", :slug=>"hercule", :password=>"803d086"},
+  {:name=>"Drevil", :slug=>"drevil", :password=>"f869410"},
+  {:name=>"Palerme", :slug=>"palerme", :password=>"3833b6a"},
+  {:name=>"Rio", :slug=>"rio", :password=>"55c869c"},
+  {:name=>"1p0", :slug=>"1p0", :password=>"d9955a1"},
+  {:name=>"Unkn0wn", :slug=>"unkn0wn", :password=>"f52cabe"},
+  {:name=>"Bogota", :slug=>"bogota", :password=>"9896128"},
+  {:name=>"Kamelot", :slug=>"kamelot", :password=>"c27d749"},
+  {:name=>"Forty3", :slug=>"forty3", :password=>"17e128d"}
 ]
 
 def class_exists?(class_name)
@@ -148,7 +148,7 @@ class Shell
       $current_dir.status
     when 'admin'
       access_admin
-    when 'destruction'
+    when 'localiser'
       $current_dir.destroy_ship
     when 'hint'
       $current_dir.hint

@@ -41,7 +41,7 @@ class AdminDir < FakeDir
 
   def hint
     puts "\n\n"
-    puts "💡  Conseil : Dans le dossier d'un administrateur, tu éditer son mot de passe."
+    puts "💡  Conseil : Dans le dossier d'un voleur, tu édites son mot de passe."
     puts "\n-----------\n"
   end
 end
@@ -58,7 +58,7 @@ class PasswordsDir < FakeDir
   def hint
     puts "\n\n"
     puts "💡  Conseil : C'est dans ce dossier que tu vas pouvoir trouver les mots de passe des\n"
-    puts "   des administrateurs pour pouvoir entrer dans leur dossier pour la première fois."
+    puts "   des voleurs pour pouvoir entrer dans leur dossier pour la première fois."
     puts "\n-----------\n"
   end
 
@@ -75,33 +75,33 @@ class AdminsDir < FakeDir
     @path = "Admins"
     populate_admins
     @list = [
-      {:name=>"Vrezeok", :slug=>"vrezeok", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Krerrin", :slug=>"krerrin", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Vrils", :slug=>"vrils", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Iktoks", :slug=>"iktoks", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Daldrar", :slug=>"daldrar", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Choldal", :slug=>"choldal", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Ghid", :slug=>"ghid", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Teivil", :slug=>"teivil", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Ruldeth", :slug=>"ruldeth", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Coknals", :slug=>"coknals", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Tenqids", :slug=>"tenqids", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Korkeids", :slug=>"korkeids", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Arkrils", :slug=>"arkrils", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Ulmae", :slug=>"ulmae", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Uval", :slug=>"uval", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Yudda", :slug=>"yudda", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Khoknuts", :slug=>"khoknuts", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Gulxot", :slug=>"gulxot", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-      {:name=>"Fodreas", :slug=>"fodreas", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true}
-    ]
+	  {:name=>"Chipeur", :slug=>"chipeur", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Joker", :slug=>"joker", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Arist0t3", :slug=>"arist0t3", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Bowser", :slug=>"bowser", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Megamind", :slug=>"megamind", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Farqu4d", :slug=>"farqu4d", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Mojo", :slug=>"mojo", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Jojo", :slug=>"jojo", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Dante", :slug=>"dante", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Roger", :slug=>"roger", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Hercule", :slug=>"hercule", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Drevil", :slug=>"drevil", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Palerme", :slug=>"palerme", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Rio", :slug=>"rio", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"1p0", :slug=>"1p0", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Unkn0wn", :slug=>"unkn0wn", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Bogota", :slug=>"bogota", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Kamelot", :slug=>"kamelot", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+	  {:name=>"Forty3", :slug=>"forty3", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true}
+	]
     @list.each { |l| l[:target] = "Admin#{l[:name]}".constantize.new}
     @list.each { |l| l[:target].parent_dir = self }
   end
 
   def hint
     puts "\n\n"
-    puts "💡  Conseil : Ici, tu peux accéder au dossier personnel des administrateurs...\n"
+    puts "💡  Conseil : Ici, tu peux accéder au dossier personnel des voleurs...\n"
     puts "   ... Si tu as le bon mot de passe."
     puts "\n-----------\n"
   end
@@ -123,7 +123,7 @@ class SecurityDir < FakeDir
 
   def hint
     puts "\n\n"
-    puts "💡  Conseil : Dans ce dossier, tu peux aller changer le mot de passe des administrateurs\n"
+    puts "💡  Conseil : Dans ce dossier, tu peux aller changer le mot de passe des voleurs\n"
     puts "   pour qu'ils ne puissent plus se connecter à leur session."
     puts "\n-----------\n"
   end

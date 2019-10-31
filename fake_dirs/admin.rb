@@ -21,7 +21,7 @@ class AdminPartDir < FakeDir
   attr_accessor :temperature_des_reacteurs, :systeme_de_refroidissement_enclanche, :aerations_ouvertes
   def initialize
     @path = "Gestion du vaisseau"
-    @password = "bc1a8fb"
+    @password = "banane" #TO DO CHANGE CESAR
     @list = [
       {name: "Liste emails", slug: "liste_emails", kind: :file, removable: false, hidden: false, editable: true, locked: false, content: ""},
       {name: "Statut des composants", slug: "statut_composants", kind: :file, removable: false, hidden: false, locked: false, content: "", editable: true}
@@ -88,22 +88,22 @@ class AdminPartDir < FakeDir
     elsif @temperature_des_reacteurs >= 400 && !@systeme_de_refroidissement_enclanche && @aerations_ouvertes <= 1
       @destroyed = true
       cursor = TTY::Cursor
-      str = "La température des réacteurs est beaucoup trop haute !\n".colorize(:red)
-      display_letters(str) ; sleep(1)
-      str = "Tentative de refroidissement des réacteurs...\n"
+      str = "Interception des messages cryptés...\n".colorize(:red)
       display_letters(str) ; sleep(1.5)
-      str = "Le système de refroidissement a été désactivé !\n".colorize(:red)
+      str = "Décryptage des informations réussi !\n".colorize(:green)
       display_letters(str) ; sleep(1)
-      str = "Tentative de refroidissement par les aérations...\n"
-      display_letters(str) ; sleep(1.5)
-      str = "Il n'y a pas assez d'aérations ouvertes !\n".colorize(:red)
+      str = "Triangulation des coordonées des voleurs...\n".colorize(:red)
+	  display_letters(str) ; sleep(1.5)
+	  str = "Localisation réussie!\n".colorize(:green)
+      display_letters(str) ; sleep(1)
+      str = "Envoi des coordonnées à la police...\n".colorize(:cyan)
       display_letters(str)
       cursor.invisible {
-        0.upto(5) { print "\r⚠️   " ; sleep 0.4 ; print "\r     " ; sleep 0.4 }
+        0.upto(5) { print "\r🚨   " ; sleep 0.4 ; print "\r🚔    " ; sleep 0.4 }
       }
       screen_clear
       a = Artii::Base.new(font: 'slant')
-      puts a.asciify('XZ120F DETRUIT !').colorize(:red)
+      puts a.asciify('VOLEURS ATTRAPPÉS!').colorize(:green)
       puts "\n\n\n"
       $current_dir = $home_dir
       $prompt.ask("Appuie sur entrée pour continuer ")
@@ -126,7 +126,7 @@ class AdminPartDir < FakeDir
 
   def set_emails_content elem
     $admins.each do |a|
-      elem[:content] += "#{a[:slug]}@xz120f.com\n"
+      elem[:content] += "#{a[:slug]}@evilcorp.com\n"
     end
   end
 
