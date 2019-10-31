@@ -45,7 +45,7 @@ class Hint
   def after_cat
     h = "\n\n"
     h += "💡  Regarde juste en haut, c'est le contenu du fichier `prochaine-analyse`\n"
-    h += "   Tu peux remarquer que l'ordinateur du voleur prévoit une analyse pour toi... Ca n'a pas l'air très très bon... Mieux vaut annuler ça tout de suite et supprimer ce fichier !"
+    h += "   Tu peux remarquer que l'ordinateur du voleur prévoit une analyse te concernant... Ça n'a pas l'air très très bon... Mieux vaut annuler ça tout de suite et supprimer ce fichier !"
     h += "\n-----------\n\n"
   end
 
