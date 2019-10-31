@@ -30,7 +30,7 @@ class Hint
 
   def after_cd
     h = "\n\n"
-    h += "💡  Maintenant que tu es dans ton dossier, tu peux voir que ton nom est écrit au niveau du prompt ($>)\n"
+    h += "💡  Maintenant que tu es dans ton dossier, tu peux voir que ton identifiant est écrit au niveau du prompt ($>)\n"
     h += "    Ca veut dire que tu es bien dans ton dossier. Voyons maintenant ce qu'il y a dedans en se servant de la commande ls ."
     h += "\n-----------\n\n"
   end
@@ -45,7 +45,7 @@ class Hint
   def after_cat
     h = "\n\n"
     h += "💡  Regarde juste en haut, c'est le contenu du fichier `prochaine-analyse`\n"
-    h += "   Tu peux remarquer que le système du vaisseau prévoit une analyse pour toi... Ca n'a pas l'air très très bon... Mieux vaut annuler ça tout de suite et supprimer ce fichier !"
+    h += "   Tu peux remarquer que l'ordinateur du voleur prévoit une analyse pour toi... Ca n'a pas l'air très très bon... Mieux vaut annuler ça tout de suite et supprimer ce fichier !"
     h += "\n-----------\n\n"
   end
 
@@ -58,21 +58,21 @@ class Hint
 
   def after_cat_user
     h = "\n\n"
-    h += "💡  Il semblerait qu'il y ait beaucoup d'informations personnelles sur toi. Supprime ce fichier aussi avec la commande " + "rm".italic
+    h += "💡  Il semblerait que le voleur ait récolté beaucoup d'informations personnelles sur toi. Supprime ce fichier aussi avec la commande " + "rm".italic
     h += "\n-----------\n\n"
   end
 
   def after_failed_rm
     h = "\n\n"
-    h += "💡  On ne peut pas supprimer ce fichier. Il faut l'éditer en mettant de fausses informations pour qu'on ne te retrouve pas !\n"
+    h += "💡  On ne peut pas supprimer ce fichier. Il faut l'éditer en mettant de fausses informations pour induire le voleur en erreur !\n"
     h += "    Remplace ce qu'il y a après les '=' !"
     h += "\n-----------\n\n"
   end
 
   def after_edit_analyse
     h = "\n\n"
-    h += "💡  Super, tu es maintenant intraçable sur le système informatique alien"
-    h += " et libre de te déplacer où tu veux.\n Tu vas pouvoir commencer à détruire le vaisseau à distance...\n"
+    h += "💡  Super, tu es maintenant intraçable sur le système informatique du voleur de diamants"
+    h += " et libre de te déplacer où tu veux.\n Tu vas pouvoir commencer à démasquer les coupables du vol de diamants...\n"
     h += "    Pour voir ce que tu peux faire, tape la commande " + "aide".italic + ". "
     h += "\n-----------\n\n"
   end
