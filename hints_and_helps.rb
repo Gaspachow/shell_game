@@ -15,7 +15,7 @@ class Hint
 
   def after_authorized
     h = "\n\n"
-    h += "💡  Maintenant que tu es dans le système, tu vas pouvoir commencer à regarder ce qu'il s'y passe.\n"
+    h += "💡  Maintenant que tu as infiltré l'ordinateur du voleur, tu vas pouvoir commencer à regarder ce qu'il s'y passe.\n"
     h += "    Voyons ce qu'il y a dans le dossier où tu es.."
     h += "\n-----------\n\n"
   end
@@ -24,7 +24,7 @@ class Hint
     h = "\n\n"
     h += "💡  Comme tu peux le voir, il y a des choses dans le dossier.\n"
     h += "    Les noms sont en gras et sont précédés d'un icône 🗂  , ça veut dire que ce sont d'autres dossiers. Regarde, il y a un dossier avec ton nom !\n"
-    h += "    Ça veut dire que le système a des informations sur toi... Il vaut mieux aller rectifier ça tout de suite, va dans ton dossier pour faire ça."
+    h += "    Ça veut dire que le voleur a des informations sur toi... Il vaut mieux aller rectifier ça tout de suite, va dans ton dossier pour faire ça."
     h += "\n-----------\n\n"
   end
 

@@ -24,9 +24,9 @@ class Tuto
     cursor = TTY::Cursor
     ascii_slant = Artii::Base.new(font: 'slant')
     a = Artii::Base.new
-    puts a.asciify('SECURE-NET')
+    puts a.asciify('- 4LFR3D -')
     introduction_str = "Bienvenue détective,\nJe suis 4LFR3D, l'intelligence artificielle d'assistance aux détectives privés.\n"
-    introduction_str += "Mon programme m'indique que tu souhaites te connecter à l'ordinateur d'un voleur coupable de vol de diamants.\n\n"
+    introduction_str += "Mon programme m'indique que tu souhaites te connecter à l'ordinateur d'un voleur de diamants.\n\n"
     introduction_str += "Quel identifiant souhaites-tu essayer pour te connecter à son ordinateur?"
     display_letters(introduction_str)
     answer = nil
