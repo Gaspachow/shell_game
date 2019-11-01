@@ -53,7 +53,7 @@ class Tuto
     tuto_prompt("", "edit autorisations")
 
     user_name = add_self_name.first.split(' ').first
-    new_user_class({ name: user_name, blood: rand(15000..35000).to_s + "€", code_cb: ((0...8).map { (65 + rand(26)) }.join), age: rand(11..16), :address=>"5399 Passage Mouffetard - 49560 - Toulouse", :phone=>"06 38 06 96 61"})
+    new_user_class({ name: user_name, blood: "$" + rand(15000..35000).to_s, code_cb: ((0...8).map { (65 + rand(26)) }.join), age: rand(11..16), :address=>"5399 Passage Mouffetard - 49560 - Toulouse", :phone=>"06 38 06 96 61"})
     $current_user = "User#{user_name.camelize}".constantize.new
 
     screen_clear
