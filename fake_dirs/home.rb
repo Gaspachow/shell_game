@@ -15,7 +15,7 @@ class HomeDir < FakeDir
 
   def hint
     puts "\n\n"
-    puts "💡  Conseil : Dans ce dossier, tu vas pouvoir te balader dans le système informatique du vaisseau.\n"
+    puts "💡  Conseil : Dans ce dossier, tu vas pouvoir te balader dans le système informatique du voleur.\n"
     puts "   Tape les commandes ls et cd pour continuer."
     puts "\n-----------\n"
   end

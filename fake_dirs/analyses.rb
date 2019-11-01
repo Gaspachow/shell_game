@@ -53,8 +53,8 @@ class AnalysesDir < FakeDir
 
   def hint
     puts "\n\n"
-    puts "💡  Conseil : Dans ce dossier, tu peux retrouver tous les utilisateurs sur qui le vaisseau \n"
-    puts "   possède des données personnelles qu'il vaudrait mieux voir disparaître !"
+    puts "💡  Conseil : Dans ce dossier, tu peux retrouver toutes les personnes sur qui le voleur \n"
+    puts "   possède des données personnelles et qu'il vaudrait mieux voir disparaître !"
     puts "\n-----------\n"
   end
 
