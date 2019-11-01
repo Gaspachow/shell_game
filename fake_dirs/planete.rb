@@ -38,14 +38,14 @@ class PlanetDir < FakeDir
 end
 
 def populate_planets
-  planets = [{name: "Terre", slug: "terre", removable: false, locked: false, kind: :dir},
-  {name: "Mars", slug: "mars", removable: false, locked: false, kind: :dir }
+  planets = [{name: "arsene", slug: "arsene", removable: false, locked: false, kind: :dir},
+  {name: "tonton", slug: "tonton", removable: false, locked: false, kind: :dir }
   ]
 
   planets.each do |pl|
     klass_name = "Planet#{pl[:name].camelize}"
     klass = class_exists?(klass_name)
-    slug = pl[:name] == "Terre" ? "slikj" : "kogh"
+    slug = pl[:name] == "arsene" ? "lupin" : "t0nt0n"
     return klass if klass
     t1 = Time.now
     t2 = Time.parse("2019-11-16 14:40:34")
@@ -54,9 +54,9 @@ def populate_planets
       define_method :initialize do
         @slug = pl[:name].downcase
         @path = pl[:name]
-        @email = "#{slug}@xz120f.com"
+        @email = "#{slug}@evilcorp.com"
         @list = [
-          {name: "Email", slug: "email", kind: :file, removable: false, locked: false, editable: false, content: "#{slug}@xz120f.com"}
+          {name: "Email", slug: "email", kind: :file, removable: false, locked: false, editable: false, content: "#{slug}@evilcorp.com"}
         ]
       end
     end
