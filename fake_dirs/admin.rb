@@ -4,34 +4,34 @@ class AdminPwdDir < FakeDir
   def initialize
     @path = "admin"
     @list = [
-      {name: "Mot de passe", slug: ".mdp", locked: true, removable: false, hidden: true, editable: false, kind: :file, content: "bc1a8fb"}
+      {name: "Mot de passe", slug: ".mdp", locked: true, removable: false, hidden: true, editable: false, kind: :file, content: "chicken-dinner"}
     ]
   end
 
   def hint
     puts "\n\n"
     puts "💡  Conseil : Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n"
-    puts "   l'administration de la gestion du vaisseau. Les fichiers sont peut-être cachés..."
+    puts "   l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés..."
     puts "\n-----------\n"
   end
 end
 
 
 class AdminPartDir < FakeDir
-  attr_accessor :temperature_des_reacteurs, :systeme_de_refroidissement_enclanche, :aerations_ouvertes
+  attr_accessor :securite_vpn_activee, :encryptage_avance_des_donnees, :niveau_de_securite_anti_triangulation
   def initialize
-    @path = "Gestion du vaisseau"
-    @password = "banane" #TO DO CHANGE CESAR
+    @path = "Gestion du systeme"
+    @password = "chicken-dinner"
     @list = [
-      {name: "Liste emails", slug: "liste_emails", kind: :file, removable: false, hidden: false, editable: true, locked: false, content: ""},
-      {name: "Statut des composants", slug: "statut_composants", kind: :file, removable: false, hidden: false, locked: false, content: "", editable: true}
+      {name: "Liste emails", slug: "clients_emails", kind: :file, removable: false, hidden: false, editable: true, locked: false, content: ""},
+      {name: "anti_tracker", slug: "anti_tracker", kind: :file, removable: false, hidden: false, locked: false, content: "", editable: true}
     ]
     set_emails_content(@list.first)
     set_status_content(@list.last)
-    @temperature_des_reacteurs = 90
-    @systeme_de_refroidissement_enclanche = true
-    @aerations_ouvertes = 10
-    @destroyed = false
+    @securite_vpn_activee = true
+    @encryptage_avance_des_donnees = true
+    @niveau_de_securite_anti_triangulation = 10
+    @localized = false
   end
 
   def edit args
@@ -43,14 +43,14 @@ class AdminPartDir < FakeDir
       File.open(filename, "w+") {|f| f.puts elem.first[:content].split("\n").map {|l| l} }
       system "nano -t #{filename}"
       f = File.read(filename)
-      if filename == "statut_composants"
+      if filename == "anti_tracker"
         f.each_line do |l|
           next if l.blank?
           var = l.split('=').first.strip.parameterize.underscore
           value = l.split('=').last.strip
-          if var == "temperature_des_reacteurs" || var == "aerations_ouvertes"
+          if var == "niveau_de_securite_anti_triangulation"
             value = value.to_i
-          elsif var == "systeme_de_refroidissement_enclanche"
+          elsif var == "encryptage_avance_des_donnees" || var == "securite_vpn_activee"
             if value.downcase == "non" || value.downcase == "false"
               value = false
             else
@@ -69,12 +69,12 @@ class AdminPartDir < FakeDir
 
   def status
 
-    puts "Température des réacteurs : #{@temperature_des_reacteurs}"
-    puts "Système de refroidissement enclanché : #{@systeme_de_refroidissement_enclanche}"
-    puts "Nombre d'aérations ouvertes : #{@aerations_ouvertes}"
-    if @temperature_des_reacteurs >= 400 && !@systeme_de_refroidissement_enclanche && @aerations_ouvertes <= 1
+    puts "Sécurité VPN activée : #{@securite_vpn_activee}"
+    puts "Encryptage avancé des données : #{@encryptage_avance_des_donnees}"
+    puts "Niveau de sécurité Anti-Triangulation : #{@niveau_de_securite_anti_triangulation}"
+    if !@securite_vpn_activee && !@encryptage_avance_des_donnees && @niveau_de_securite_anti_triangulation <= 1
       puts "\n/!\\ ATTENTION ! L'ETAT DU VAISSEAU EST TRÈS CRITIQUE\n".colorize(:red)
-    elsif @temperature_des_reacteurs <= 100 && @systeme_de_refroidissement_enclanche && @aerations_ouvertes >= 10
+    elsif @securite_vpn_activee && @encryptage_avance_des_donnees && @niveau_de_securite_anti_triangulation >= 10
       puts "\nLe vaisseau est en bon état\n".colorize(:green)
     else
       puts "\nAttention, le vaisseau n'est pas en bon état\n".colorize(:yellow)
@@ -83,10 +83,10 @@ class AdminPartDir < FakeDir
 
   def destroy_ship
     (puts "Il faut d'abord envoyer un mail aux analyseurs des planètes pour les faire revenir sur le vaisseau." ; return) if !mails_sent?
-    if @destroyed
+    if @localized
       puts "\nLe vaisseau a déjà été détruit.\n"
-    elsif @temperature_des_reacteurs >= 400 && !@systeme_de_refroidissement_enclanche && @aerations_ouvertes <= 1
-      @destroyed = true
+    elsif !@securite_vpn_activee && !@encryptage_avance_des_donnees && @niveau_de_securite_anti_triangulation <= 1
+      @localized = true
       cursor = TTY::Cursor
       str = "Interception des messages cryptés...\n".colorize(:red)
       display_letters(str) ; sleep(1.5)
@@ -103,7 +103,7 @@ class AdminPartDir < FakeDir
       }
       screen_clear
       a = Artii::Base.new(font: 'slant')
-      puts a.asciify('VOLEURS ATTRAPPÉS!').colorize(:green)
+      puts a.asciify('VOLEURS ATTRAPPES!').colorize(:green)
       puts "\n\n\n"
       $current_dir = $home_dir
       $prompt.ask("Appuie sur entrée pour continuer ")
@@ -131,9 +131,9 @@ class AdminPartDir < FakeDir
   end
 
   def set_status_content elem
-    elem[:content] += "Température des réacteurs = 90\n"
-    elem[:content] += "Système de refroidissement enclanché = Oui\n"
-    elem[:content] += "Aérations ouvertes = 10\n"
+    elem[:content] += "Sécurité VPN activée = Oui\n"
+    elem[:content] += "Encryptage avancé des données = Oui\n"
+    elem[:content] += "Niveau de sécurité Anti-Triangulation = 10\n"
   end
 
   def mails_sent?
