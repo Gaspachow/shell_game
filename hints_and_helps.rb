@@ -72,7 +72,7 @@ class Hint
   def after_edit_analyse
     h = "\n\n"
     h += "💡  Super, tu es maintenant intraçable sur le système informatique du voleur de diamants"
-    h += " et libre de te déplacer où tu veux.\n Tu vas pouvoir commencer à démasquer les coupables du vol de diamants...\n"
+    h += " et libre de te déplacer où tu veux.\n Tu vas pouvoir commencer à démasquer le coupable du vol de diamants et ses associés...\n"
     h += "    Pour voir ce que tu peux faire, tape la commande " + "aide".italic + ". "
     h += "\n-----------\n\n"
   end

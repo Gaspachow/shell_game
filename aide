@@ -19,7 +19,7 @@
 
 Tu trouveras ici des informations qui t'aideront pendant toute l'enquête.
 
-En première partie, tu trouveras des indications sur les étapes à effectuer pour retrouver le diamant.
+En première partie, tu trouveras des indications sur les étapes à effectuer pour retrouver le voleur et le diamant.
 
 En dernière partie, tu trouveras la liste des commnandes importantes que tu pourras utiliser.
 
@@ -32,7 +32,7 @@ I / LES ETAPES
 
 - Aller dans le dossier `admin` et récupérer le mot de passe qui permettra d'accéder à la gestion de l'ordinateur du voleur.
 
-- Accéder à la partie `gestion de l'ordinateur` et trouver ou le voleur se cache ainsi que le diamant, pour enfin envoyer sa position à la police.
+- Accéder à la partie `gestion de l'ordinateur` et trouver où le voleur se cache avec le diamant, pour enfin envoyer sa position à la police.
 
 
 
@@ -67,7 +67,7 @@ II / LES COMMANDES
 
     * Pour enregistrer, il faut faire CTRL + X
 
-  -> admin : permet d'acceder à l'espace sécurisé de l'ordinateur du voleur.
+  -> admin : permet d'acceder à l'espace de gestion de l'ordinateur du voleur.
 
   -> rm : supprime le fichier passé en paramètre.
 
