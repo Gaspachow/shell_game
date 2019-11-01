@@ -58,7 +58,7 @@ class PasswordsDir < FakeDir
   def hint
     puts "\n\n"
     puts "💡  Conseil : C'est dans ce dossier que tu vas pouvoir trouver les mots de passe des\n"
-    puts "   des voleurs pour pouvoir entrer dans leur dossier pour la première fois."
+    puts "    voleurs afin d'entrer dans leur dossier."
     puts "\n-----------\n"
   end
 
@@ -102,7 +102,7 @@ class AdminsDir < FakeDir
   def hint
     puts "\n\n"
     puts "💡  Conseil : Ici, tu peux accéder au dossier personnel des voleurs...\n"
-    puts "   ... Si tu as le bon mot de passe."
+    puts "   ... si tu as le bon mot de passe."
     puts "\n-----------\n"
   end
 end
