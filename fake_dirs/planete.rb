@@ -29,9 +29,9 @@ class PlanetDir < FakeDir
 
   def hint
     puts "\n\n"
-    puts "💡  Conseil : Ici, tu trouveras l'email des aliens chargés d'analyser les planètes.\n"
-    puts "    Avant de détruire le vaisseau, il serait judicieux de leur envoyer un mail afin qu'ils\n"
-    puts "    retournent sur le vaisseau principal pendant la catastrophe !"
+    puts "💡  Conseil : Ici, tu trouveras l'email des associés du voleur de diamant.\n"
+    puts "    Avant de localiser le voleur, il serait judicieux de leur envoyer un mail afin de leur\n"
+    puts "    donner rendez-vous dans un lieu où la police les attendra !"
     puts "\n-----------\n"
 
   end
