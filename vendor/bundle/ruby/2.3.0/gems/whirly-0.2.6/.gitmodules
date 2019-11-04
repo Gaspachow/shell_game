@@ -1,3 +1,0 @@
-[submodule "data/external/cli-spinners"]
-	path = data/external/cli-spinners
-	url = https://github.com/sindresorhus/cli-spinners.git
