@@ -39,7 +39,7 @@ end
 
 def populate_planets
   planets = [{name: "arsene", slug: "arsene", removable: false, locked: false, kind: :dir},
-  {name: "tonton", slug: "tonton", removable: false, locked: false, kind: :dir }
+ 			{name: "tonton", slug: "tonton", removable: false, locked: false, kind: :dir }
   ]
 
   planets.each do |pl|

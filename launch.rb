@@ -113,12 +113,12 @@ class Shell
   end
 
   def display
-    args = nil
-    while !args || args.strip != "exit"
-      args = $prompt.ask("$ #{$current_dir.path} >") do |q|
-        if args
-          q.modify   :downcase
-        end
+	args = nil
+	while !args || args.strip != "exit"
+	  args = $prompt.ask("$ #{$current_dir.path} >") do |q|
+		if args
+          q.modify   :down
+		end
       end
       command_parse(args) if args
     end
@@ -127,7 +127,7 @@ class Shell
   def command_parse args
     if args
       cmd = args.strip.split.first
-      cmd_args = args.strip.split.drop(1)
+	  cmd_args = args.strip.split.drop(1)
     end
     case cmd
     when 'ls'
@@ -175,6 +175,6 @@ class Shell
 end
 
 
-Tuto.new
+#Tuto.new
 @shell = Shell.new
 @shell.display
