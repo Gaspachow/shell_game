@@ -121,8 +121,8 @@ class AdminPartDir < FakeDir
     puts "    Dans la partie de gestion du système, tu vas pouvoir trouver les coordonnées du voleur de diamant !\n".colorize(:light_black)
     puts "    Pour cela, il va falloir désactiver ses différents protocoles de sécurité qui t'empêchent de le localiser !\n".colorize(:light_black)
     puts "    En éditant le fichier correspondant, tu vas pouvoir modifier et desactiver ses différentes techniques de protection. \n".colorize(:light_black)
-    puts "    Tu vas pouvoir constater l'état de sécurité du système grâce à la commande `status` et tenter d'envoyer les coordonnées\n".colorize(:light_black)
-    puts "    du voleur à la police grâce à la commande `localiser`".colorize(:light_black)
+    puts "    Tu vas pouvoir constater l'état de sécurité du système grâce à la commande".colorize(:light_black) + "status".colorize(light_yellow) + "et tenter d'envoyer les coordonnées\n".colorize(:light_black)
+    puts "    du voleur à la police grâce à la commande".colorize(light_black) + "localiser".colorize(:light_yellow)
 	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 
