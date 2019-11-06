@@ -10,7 +10,7 @@ class AdminPwdDir < FakeDir
 
   def hint
 	puts "\n\n"
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
     puts "    Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n".colorize(:light_black)
     puts "    l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés...".colorize(:light_black)
