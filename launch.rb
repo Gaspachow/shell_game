@@ -150,7 +150,11 @@ class Shell
       access_admin
     when 'localiser'
       $current_dir.destroy_ship
-    when 'hint'
+    when '4lfr3d'
+      $current_dir.hint
+    when '4LFR3D'
+      $current_dir.hint
+    when 'alfred'
       $current_dir.hint
     when 'mail'
       $current_dir.mail(cmd_args)
@@ -174,6 +178,6 @@ class Shell
   end
 end
 
-Tuto.new
+# Tuto.new
 @shell = Shell.new
 @shell.display

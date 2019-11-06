@@ -43,8 +43,13 @@ class AdminDir < FakeDir
 	puts "\n\n"
 	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
+<<<<<<< HEAD
     puts "    Dans le dossier d'un voleur, tu édites son mot de passe.".colorize(:light_black)
 	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
+=======
+    puts "    Maintenant que tu es dans le dossier d'un voleur, édite son mot de passe."
+    puts "\n-----------\n"
+>>>>>>> 3dce62fff3e9c61fe31c318f0561fe7e1c56e094
   end
 end
 
@@ -121,7 +126,7 @@ class SecurityDir < FakeDir
     $passwords_dir = PasswordsDir.new
     @path = "Securite"
     @list = [
-      {name: "Mots de passe", slug: "mots_de_passe", locked: false, removable: false, kind: :dir, target: $passwords_dir},
+      {name: "Mot de passe", slug: "mot_de_passe", locked: false, removable: false, kind: :dir, target: $passwords_dir},
       {name: "Admins", slug: "admins", locked: false, removable: false, kind: :dir, target: $admins_dir},
     ]
     @list.each { |l| l[:target].parent_dir = self }
