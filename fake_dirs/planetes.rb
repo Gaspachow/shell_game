@@ -12,9 +12,10 @@ class PlanetesDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
-    puts "    Dans ce dossier, tu trouveras les deux associés du voleur de diamant."
-    puts "\n-----------\n"
+    puts "    Dans ce dossier, tu trouveras les deux associés du voleur de diamant.".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 
   end
 

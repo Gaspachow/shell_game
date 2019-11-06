@@ -41,9 +41,10 @@ class AdminDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
-    puts "    Dans le dossier d'un voleur, tu édites son mot de passe."
-    puts "\n-----------\n"
+    puts "    Dans le dossier d'un voleur, tu édites son mot de passe.".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 end
 
@@ -58,10 +59,11 @@ class PasswordsDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
-    puts "    C'est dans ce dossier que tu vas pouvoir trouver les mots de passe des\n"
-    puts "    voleurs afin d'entrer dans leur dossier."
-    puts "\n-----------\n"
+    puts "    C'est dans ce dossier que tu vas pouvoir trouver les mots de passe des\n".colorize(:light_black)
+    puts "    voleurs afin d'entrer dans leur dossier.".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 
   private
@@ -103,10 +105,11 @@ class AdminsDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
-    puts "    Ici, tu peux accéder au dossier personnel des voleurs...\n"
-    puts "    ... si tu as le bon mot de passe."
-    puts "\n-----------\n"
+    puts "    Ici, tu peux accéder au dossier personnel des voleurs...\n".colorize(:light_black)
+    puts "    ... si tu as le bon mot de passe.".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 end
 
@@ -126,10 +129,11 @@ class SecurityDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
-    puts "    Dans ce dossier, tu peux aller changer le mot de passe des voleurs\n"
-    puts "    pour qu'ils ne puissent plus se connecter à leur session."
-    puts "\n-----------\n"
+    puts "    Dans ce dossier, tu peux aller changer le mot de passe des voleurs\n".colorize(:light_black)
+    puts "    pour qu'ils ne puissent plus se connecter à leur session.".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 
 end

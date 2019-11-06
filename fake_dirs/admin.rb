@@ -10,10 +10,11 @@ class AdminPwdDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
-    puts "    Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n"
-    puts "    l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés..."
-    puts "\n-----------\n"
+    puts "    Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n".colorize(:light_black)
+    puts "    l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés...".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 end
 
@@ -115,13 +116,14 @@ class AdminPartDir < FakeDir
 
   def hint
 	puts "\n\n"
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
-    puts "    Dans la partie de gestion du système, tu vas pouvoir trouver les coordonnées du voleur de diamant !\n"
-    puts "    Pour cela, il va falloir désactiver ses différents protocoles de sécurité qui t'empêchent de le localiser !\n"
-    puts "    En éditant le fichier correspondant, tu vas pouvoir modifier et desactiver ses différentes techniques de protection. \n"
-    puts "    Tu vas pouvoir constater l'état de sécurité du système grâce à la commande `status` et tenter d'envoyer les coordonnées\n"
-    puts "    du voleur à la police grâce à la commande `localiser`"
-    puts "\n-----------\n"
+    puts "    Dans la partie de gestion du système, tu vas pouvoir trouver les coordonnées du voleur de diamant !\n".colorize(:light_black)
+    puts "    Pour cela, il va falloir désactiver ses différents protocoles de sécurité qui t'empêchent de le localiser !\n".colorize(:light_black)
+    puts "    En éditant le fichier correspondant, tu vas pouvoir modifier et desactiver ses différentes techniques de protection. \n".colorize(:light_black)
+    puts "    Tu vas pouvoir constater l'état de sécurité du système grâce à la commande `status` et tenter d'envoyer les coordonnées\n".colorize(:light_black)
+    puts "    du voleur à la police grâce à la commande `localiser`".colorize(:light_black)
+	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 
   private
