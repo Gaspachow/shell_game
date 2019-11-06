@@ -10,7 +10,7 @@ class AdminPwdDir < FakeDir
 
   def hint
 	puts "\n\n"
-	puts "🤖   4LFR3D:\n".colorize(:light_black) 
+	puts "🤖   4LFR3D:\n".colorize(:light_blue)
     puts "    Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n"
     puts "    l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés..."
     puts "\n-----------\n"
@@ -115,7 +115,7 @@ class AdminPartDir < FakeDir
 
   def hint
 	puts "\n\n"
-	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
+	puts "🤖   4LFR3D:\n".colorize(:light_blue)
     puts "    Dans la partie de gestion du système, tu vas pouvoir trouver les coordonnées du voleur de diamant !\n"
     puts "    Pour cela, il va falloir désactiver ses différents protocoles de sécurité qui t'empêchent de le localiser !\n"
     puts "    En éditant le fichier correspondant, tu vas pouvoir modifier et desactiver ses différentes techniques de protection. \n"
