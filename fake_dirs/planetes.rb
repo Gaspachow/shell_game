@@ -2,7 +2,7 @@ require_relative '_base'
 class PlanetesDir < FakeDir
   attr_reader :list
   def initialize
-    @path = "asssocies"
+    @path = "associes"
     @list = [
       {name: "Arsene", slug: "arsene", removable: false, locked: false, kind: :dir, target: "PlanetArsene".constantize.new},
       {name: "Tonton", slug: "tonton", removable: false, locked: false, kind: :dir, target: "PlanetTonton".constantize.new }
