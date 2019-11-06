@@ -30,6 +30,7 @@ class AdminDir < FakeDir
       f = File.read(filename)
       new_cont = f.split.first
       unless !new_cont || new_cont.empty?
+        $admins[16][:password] = new_cont
         elem.first[:content] = new_cont
         @password = new_cont
       end

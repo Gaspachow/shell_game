@@ -66,7 +66,7 @@ $admins = [
   {:name=>"Rio", :slug=>"rio", :password=>"55c869c"},
   {:name=>"1p0", :slug=>"1p0", :password=>"d9955a1"},
   {:name=>"Unkn0wn", :slug=>"unkn0wn", :password=>"f52cabe"},
-  {:name=>"Bogota", :slug=>"bogota", :password=>"9896128"},
+  {:name=>"Bogota", :slug=>"bogota", :password=>"989612898961289896128"},
   {:name=>"Kamelot", :slug=>"kamelot", :password=>"c27d749"},
   {:name=>"Forty3", :slug=>"forty3", :password=>"17e128d"}
 ]
@@ -158,6 +158,8 @@ class Shell
       $current_dir.hint
     when 'mail'
       $current_dir.mail(cmd_args)
+    when 'progres'
+      $home_dir.progres
     else
       puts "La commande a mal été formulée."
     end
