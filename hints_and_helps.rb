@@ -147,7 +147,8 @@ class HelpCommands
     h = "💻  La commande ".colorize(:light_black) + "aide".colorize(:light_yellow) + " te permet de lister toutes les commandes que tu peux utiliser\n".colorize(:light_black)
     h += "   et de t'expliquer tout ce que tu peux faire.\n".colorize(:light_black)
     h += "   Rappelle-toi des commandes que tu as déjà vu : ls, cat, edit, rm, cd\n".colorize(:light_black)
-    h += "   Quand tu rentres dans un nouveau dossier, n'hésite pas à taper ".colorize(:light_black) + "ls".colorize(:light_yellow) + " pour voir tout ce qu'il contient !".colorize(:light_black)
+	h += "   Quand tu rentres dans un nouveau dossier, n'hésite pas à taper ".colorize(:light_black) + "ls".colorize(:light_yellow) + " pour voir tout ce qu'il contient !".colorize(:light_black)
+	h += "\n\n   Tu peux aussi m'appeler quand tu es un peu perdu en utilisant la commande ".colorize(:light_blue) + "4lfr3d".colorize(:light_yellow)
     h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 end
