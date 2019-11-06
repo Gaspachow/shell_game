@@ -188,9 +188,9 @@ class Tuto
         $current_dir.ls
       else
         exit if cmd && cmd == "exit"
-        hint = "(🤖 4LFR3D : Essaye \"#{answer}\")".colorize(:light_yellow) if i >= 2
-        if !cmd || cmd.strip != answer
-          puts "Ce n'est pas la bonne commande. #{hint}"
+        hint = "(Essaye " + "#{answer}".colorize(:light_yellow) + ")" if i >= 2
+		if !cmd || cmd.strip != answer
+		  puts "🤖   4LFR3D : ".colorize(:light_blue) + "Ce n'est pas la bonne commande. #{hint}"
           cmd = nil
         end
       end
