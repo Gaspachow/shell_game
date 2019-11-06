@@ -32,7 +32,7 @@ I / LES ETAPES
 
 - Aller dans le dossier `admin` et récupérer le mot de passe qui permettra d'accéder à la gestion de l'ordinateur du voleur.
 
-- Accéder à la partie `gestion du système` et localiser où le voleur se cache avec le diamant, pour enfin envoyer sa position à la police.
+- Accéder à la partie `gestion du système` avec la commande "admin" et localiser où le voleur se cache avec le diamant, pour enfin envoyer sa position à la police.
 
 
 
@@ -75,7 +75,7 @@ II / LES COMMANDES
 
   -> chmod : modifie les permissions d'accès du fichier indiqué.
 
-    * Si l'option "+r" est donnée, donne les droits de lecture du fichier.
+    * Utilise la commande "chmod +r" pour te donner les droits de lecture du fichier.
 
   -> mail : envoie un email au destinataire spécifié en paramètre
 
