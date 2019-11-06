@@ -113,8 +113,6 @@ class HelpCommands
 
   def after_authorized
     h = "💻  Pour voir ce qu'il y a dans le dossier où tu es, tu peux taper la commande ".colorize(:light_black) + "ls".colorize(:light_yellow) + "\n"
-    # h += "   Par exemple :\n".colorize(:light_black)
-	# h += "   ls".colorize(:light_yellow).italic
 	h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 
