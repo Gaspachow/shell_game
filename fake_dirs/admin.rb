@@ -110,7 +110,7 @@ class AdminPartDir < FakeDir
       $current_dir = $home_dir
       $prompt.ask("Félicitations!\nLe voleur de diamant a été arrêté et identifié par la police! Il s'agirait du légendaire \"Charly\", mondialement connu pour ses talents de cache-cache.\nLa police tient à te remercier personnellement et espère pouvoir faire appel à tes talents dans le futur.\nAppuie sur entrée pour continuer ")
     else
-      puts "\nLe système de sécurité du système est trop élevé pour localiser le voleur!\n\n"
+      puts "\nLe système de sécurité est trop élevé pour localiser le voleur!\n\n"
     end
   end
 
