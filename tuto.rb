@@ -24,7 +24,7 @@ class Tuto
     cursor = TTY::Cursor
     ascii_slant = Artii::Base.new(font: 'slant')
     a = Artii::Base.new
-    puts a.asciify('- 4LFR3D -')
+    puts a.asciify('- 4LFR3D -').colorize(:light_blue)
     introduction_str = "Bienvenue détective,\nJe suis 4LFR3D, l'intelligence artificielle d'assistance aux détectives privés.\n"
     introduction_str += "Mon programme m'indique que tu souhaites te connecter à l'ordinateur d'un voleur de diamants.\n\n"
     introduction_str += "Quel identifiant souhaites-tu essayer pour te connecter à son ordinateur?"
@@ -188,7 +188,7 @@ class Tuto
         $current_dir.ls
       else
         exit if cmd && cmd == "exit"
-        hint = "(💡  #{answer})".colorize(:light_yellow) if i >= 2
+        hint = "(🤖 4LFR3D : Essaye \"#{answer}\")".colorize(:light_yellow) if i >= 2
         if !cmd || cmd.strip != answer
           puts "Ce n'est pas la bonne commande. #{hint}"
           cmd = nil

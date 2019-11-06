@@ -11,8 +11,9 @@ class PlanetesDir < FakeDir
   end
 
   def hint
-    puts "\n\n"
-    puts "💡  Conseil : Dans ce dossier, tu trouveras les deux associés du voleur de diamant."
+	puts "\n\n"
+	puts "🤖   4LFR3D:\n".colorize(:light_black) 
+    puts "    Dans ce dossier, tu trouveras les deux associés du voleur de diamant."
     puts "\n-----------\n"
 
   end

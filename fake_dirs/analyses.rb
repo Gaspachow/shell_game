@@ -52,9 +52,10 @@ class AnalysesDir < FakeDir
   end
 
   def hint
-    puts "\n\n"
-    puts "💡  Conseil : Dans ce dossier, tu peux retrouver toutes les personnes sur qui le voleur \n"
-    puts "   possède des données personnelles et qu'il vaudrait mieux voir disparaître !"
+	puts "\n\n"
+	puts "🤖   4LFR3D:\n".colorize(:light_black) 
+    puts "    Dans ce dossier, tu peux retrouver toutes les personnes sur qui le voleur \n"
+    puts "    possède des données personnelles et qu'il vaudrait mieux voir disparaître !"
     puts "\n-----------\n"
   end
 

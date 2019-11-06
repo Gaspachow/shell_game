@@ -9,9 +9,10 @@ class AdminPwdDir < FakeDir
   end
 
   def hint
-    puts "\n\n"
-    puts "💡  Conseil : Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n"
-    puts "   l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés..."
+	puts "\n\n"
+	puts "🤖   4LFR3D:\n".colorize(:light_black) 
+    puts "    Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n"
+    puts "    l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés..."
     puts "\n-----------\n"
   end
 end
@@ -113,12 +114,13 @@ class AdminPartDir < FakeDir
   end
 
   def hint
-    puts "\n\n"
-    puts "💡 Conseil : Dans la partie de gestion du système, tu vas pouvoir trouver les coordonnées du voleur de diamant !\n"
-    puts "   Pour cela, il va falloir désactiver ses différents protocoles de sécurité qui t'empêchent de le localiser !\n"
-    puts "   En éditant le fichier correspondant, tu vas pouvoir modifier et desactiver ses différentes techniques de protection. \n"
-    puts "   Tu vas pouvoir constater l'état de sécurité du système grâce à la commande `status` et tenter d'envoyer les coordonnées\n"
-    puts "   du voleur à la police grâce à la commande `localiser`"
+	puts "\n\n"
+	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
+    puts "    Dans la partie de gestion du système, tu vas pouvoir trouver les coordonnées du voleur de diamant !\n"
+    puts "    Pour cela, il va falloir désactiver ses différents protocoles de sécurité qui t'empêchent de le localiser !\n"
+    puts "    En éditant le fichier correspondant, tu vas pouvoir modifier et desactiver ses différentes techniques de protection. \n"
+    puts "    Tu vas pouvoir constater l'état de sécurité du système grâce à la commande `status` et tenter d'envoyer les coordonnées\n"
+    puts "    du voleur à la police grâce à la commande `localiser`"
     puts "\n-----------\n"
   end
 
