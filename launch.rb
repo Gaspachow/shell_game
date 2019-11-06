@@ -117,7 +117,7 @@ class Shell
 	while !args || args.strip != "exit"
 	  args = $prompt.ask("$ #{$current_dir.path} >") do |q|
 		if args
-          q.modify   :down
+         # q.modify   :down
 		end
       end
       command_parse(args) if args
@@ -174,7 +174,6 @@ class Shell
   end
 end
 
-
-#Tuto.new
+Tuto.new
 @shell = Shell.new
 @shell.display
