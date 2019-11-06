@@ -57,11 +57,11 @@ class FakeDir
     ($current_dir = @parent_dir ; return) if arg == ".."
     if elem and elem[:kind] == :dir
       if elem[:pwd_needed]
-        pwd = $prompt.ask("Mots de passe pour #{elem[:target].name} :") do |q|
-          q.modify   :downcase
-          q.modify   :strip
+        pwd = $prompt.ask("Mot de passe pour #{elem[:target].name} :") do |q|
+          (q.modify   :downcase
+          q.modify   :strip) if pwd != nil
         end
-        (puts "Le mot de passe n'est pas bon" ; return ) if pwd.empty? || pwd != elem[:target].password
+        (puts "Le mot de passe n'est pas bon" ; return ) if pwd == nil || pwd.empty? || pwd != elem[:target].password
         $current_dir = elem[:target]
       else
         $current_dir = elem[:target]
