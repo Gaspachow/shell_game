@@ -104,22 +104,22 @@ class HelpCommands
 
   def edit file=nil
     file = file || "autorisations"
-    h = "💻  Pour éditer un fichier, tape la commande ".colorize(:light_black) + "edit".colorize(:light_yellow) + " et le nom du fichier\n".colorize(:light_black)
-    h += "   que tu veux éditer derrière. Par exemple :\n".colorize(:light_black)
-	h += "   edit #{file}".colorize(:light_yellow).italic
-	h += "\n\n   Tu peux fermer le fichier en tapant CTRL+X".colorize(:light_yellow)
+    h = "💻  Pour éditer un fichier, tape la commande ".colorize(:light_yellow) + "edit".colorize(:red) + " et le nom du fichier\n".colorize(:light_yellow)
+    h += "   que tu veux éditer derrière. Par exemple :\n".colorize(:light_yellow)
+	h += "   edit #{file}".colorize(:red).italic
+	h += "\n\n   Tu peux fermer le fichier en tapant CTRL+X".colorize(:red)
 	h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 
   def after_authorized
-    h = "💻  Pour voir ce qu'il y a dans le dossier où tu es, tu peux taper la commande ".colorize(:light_black) + "ls".colorize(:light_yellow) + "\n"
+    h = "💻  Pour voir ce qu'il y a dans le dossier où tu es, tu peux taper la commande ".colorize(:light_yellow) + "ls".colorize(:red) + "\n"
 	h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 
   def after_ls
-    h = "💻  Pour aller dans un dossier, il faut utiliser la commande ".colorize(:light_black) + "cd".colorize(:light_yellow) + " avec le nom du dossier juste après.\n".colorize(:light_black)
-    h += "   Par exemple :\n".colorize(:light_black)
-    h += "   cd #{$current_user.slug}".colorize(:light_yellow).italic
+    h = "💻  Pour aller dans un dossier, il faut utiliser la commande ".colorize(:light_yellow) + "cd".colorize(:red) + " avec le nom du dossier juste après.\n".colorize(:light_yellow)
+    h += "   Par exemple :\n".colorize(:light_yellow)
+    h += "   cd #{$current_user.slug}".colorize(:red).italic
     h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 
@@ -129,26 +129,26 @@ class HelpCommands
 
   def after_enter_user file=nil
     file = file || "fichier"
-    h = "💻  Pour afficher le contenu d'un fichier à l'écran, tape la commande ".colorize(:light_black) + "cat".colorize(:light_yellow) + " suivi du nom du fichier.\n".colorize(:light_black)
-    h += "   Par exemple :\n".colorize(:light_black)
-    h += "   cat #{file}".colorize(:light_yellow).italic
+    h = "💻  Pour afficher le contenu d'un fichier à l'écran, tape la commande ".colorize(:light_yellow) + "cat".colorize(:red) + " suivi du nom du fichier.\n".colorize(:light_yellow)
+    h += "   Par exemple :\n".colorize(:light_yellow)
+    h += "   cat #{file}".colorize(:red).italic
     h += "\n______________________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 
   def after_cat file=nil
     file = file || "fichier"
-    h = "💻  Pour supprimer un fichier, tape la commande ".colorize(:light_black) + "rm".italic + " suivi du nom du fichier.\n".colorize(:light_black)
-    h += "   Par exemple :\n".colorize(:light_black)
-    h += "   rm #{file}".colorize(:light_yellow).italic
+    h = "💻  Pour supprimer un fichier, tape la commande ".colorize(:light_yellow) + "rm".colorize(:red).italic + " suivi du nom du fichier.\n".colorize(:light_yellow)
+    h += "   Par exemple :\n".colorize(:light_yellow)
+    h += "   rm #{file}".colorize(:red).italic
     h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 
   def after_edit_analyse
-    h = "💻  La commande ".colorize(:light_black) + "aide".colorize(:light_yellow) + " te permet de lister toutes les commandes que tu peux utiliser\n".colorize(:light_black)
-    h += "   et de t'expliquer tout ce que tu peux faire.\n".colorize(:light_black)
-    h += "   Rappelle-toi des commandes que tu as déjà vu : ls, cat, edit, rm, cd\n".colorize(:light_black)
-	h += "   Quand tu rentres dans un nouveau dossier, n'hésite pas à taper ".colorize(:light_black) + "ls".colorize(:light_yellow) + " pour voir tout ce qu'il contient !".colorize(:light_black)
-	h += "\n\n   Tu peux aussi m'appeler quand tu es un peu perdu en utilisant la commande ".colorize(:light_blue) + "4lfr3d".colorize(:light_yellow)
+    h = "💻  La commande ".colorize(:light_yellow) + "aide".colorize(:red) + " te permet de lister toutes les commandes que tu peux utiliser\n".colorize(:light_yellow)
+    h += "   et de t'expliquer tout ce que tu peux faire.\n".colorize(:light_yellow)
+    h += "   Rappelle-toi des commandes que tu as déjà vu :".colorize(:light_yellow) +" ls, cat, edit, rm, cd\n".colorize(:red)
+	h += "   Quand tu rentres dans un nouveau dossier, n'hésite pas à taper ".colorize(:light_yellow) + "ls".colorize(:red) + " pour voir tout ce qu'il contient !".colorize(:light_yellow)
+	h += "\n\n   Tu peux aussi m'appeler quand tu es un peu perdu en utilisant la commande ".colorize(:light_blue) + "4lfr3d".colorize(:green)
     h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 end

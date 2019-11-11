@@ -82,6 +82,7 @@ end
 Dir["./fake_dirs/*.rb"].each {|file| require_relative file }
 
 require_relative 'populate'
+require_relative 'aide'
 
 populate_users
 populate_planets
@@ -93,6 +94,7 @@ $admin_dir = AdminPwdDir.new
 $admin_part_dir = AdminPartDir.new
 
 $home_dir = HomeDir.new
+$help_dis = HelpCommand.new
 
 
 
@@ -103,7 +105,6 @@ $home_dir = HomeDir.new
 
 require_relative 'hints_and_helps'
 require_relative 'ascii_arts'
-
 
 require_relative 'tuto'
 
@@ -143,7 +144,8 @@ class Shell
     when 'edit'
       $current_dir.edit(cmd_args)
     when 'aide'
-      system "less aide"
+      puts($help_dis.edit)
+      #system "less aide" debate whether we keep less aide or help_disp
     when 'status'
       $current_dir.status
     when 'admin'
