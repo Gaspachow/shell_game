@@ -172,7 +172,7 @@ class Shell
   def access_admin
     pwd = nil
     while !pwd
-      pwd = $prompt.ask("Mot de passe pour accéder à la gestion du vaisseau :")
+      pwd = $prompt.ask("Mot de passe pour accéder à la gestion de l'ordinateur :")
       if pwd && pwd != $admin_part_dir.password
         puts "Mauvais mot de passe"
       else
