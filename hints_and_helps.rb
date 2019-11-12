@@ -49,7 +49,7 @@ class Hint
     h = "\n\n"
     h += "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	h += "🤖   4LFR3D:\n".colorize(:light_blue)
-	h += "    Tu peux voir que ce qu'il y a à l'interieur de ce dossier sont des fichiers, car il y a l'icône 📄  devant.\n".colorize(:light_black)
+	h += "    Tu peux voir que ce qu'il y a à l'intérieur de ce dossier sont des fichiers, car il y a l'icône 📄  devant.\n".colorize(:light_black)
     h += "    Voyons ce que contient le fichier ".colorize(:light_black) + "prochaine-analyse".colorize(:light_yellow) + " !".colorize(:light_black)
     h += "\n".colorize(:light_black)
   end
@@ -76,7 +76,7 @@ class Hint
 	h = "\n\n"
 	h += "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	h += "🤖   4LFR3D:\n".colorize(:light_blue)
-	h += "    Il semblerait que le voleur ait récolté beaucoup d'informations personnelles sur toi. Supprime ce fichier aussi avec la commande ".colorize(:light_black) + "rm".colorize(:light_yellow)
+	h += "    Il semblerait que le voleur aie récolté beaucoup d'informations personnelles sur toi. Supprime ce fichier aussi avec la commande ".colorize(:light_black) + "rm".colorize(:light_yellow)
     h += "\n".colorize(:light_black)
   end
 
@@ -146,7 +146,7 @@ class HelpCommands
   def after_edit_analyse
     h = "💻  La commande ".colorize(:light_yellow) + "aide".colorize(:red) + " te permet de lister toutes les commandes que tu peux utiliser\n".colorize(:light_yellow)
     h += "   et de t'expliquer tout ce que tu peux faire.\n".colorize(:light_yellow)
-    h += "   Rappelle-toi des commandes que tu as déjà vu :".colorize(:light_yellow) +" ls, cat, edit, rm, cd\n".colorize(:red)
+    h += "   Rappelle-toi des commandes que tu as déjà vues :".colorize(:light_yellow) +" ls, cat, edit, rm, cd\n".colorize(:red)
 	h += "   Quand tu rentres dans un nouveau dossier, n'hésite pas à taper ".colorize(:light_yellow) + "ls".colorize(:red) + " pour voir tout ce qu'il contient !".colorize(:light_yellow)
 	h += "\n\n   Tu peux aussi m'appeler quand tu es un peu perdu en utilisant la commande ".colorize(:light_blue) + "4lfr3d".colorize(:green)
     h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
