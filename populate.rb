@@ -2,9 +2,9 @@ def faker_analyse user
   f = "addresse = #{user[:address]}\n"
   f += "telephone = #{user[:phone]}\n"
   f += "age = #{user[:age]}\n"
-  f += "compte banquaire = #{user[:code_cb]}\n"
+  f += "compte bancaire = #{user[:code_cb]}\n"
   f += "fortune = #{user[:blood]}\n"
-  f += "compte banquaire accessible = oui\n"
+  f += "compte bancaire accessible = oui\n"
 end
 
 def new_user_class user
