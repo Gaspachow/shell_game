@@ -76,6 +76,6 @@ class HelpCommand
 
           -> #{"status".colorize(:green)} : donne l'état de sécurité de l'ordinateur (ne fonctionne que dans la partie gestion de l'ordinateur.)
 
-          -> #{"localisation".colorize(:green)} : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.))
+          -> #{"localiser".colorize(:green)} : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.))
     end
 end

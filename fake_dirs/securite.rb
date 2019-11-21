@@ -40,13 +40,13 @@ class AdminDir < FakeDir
     end
   end
 
-  def hint
-	puts "\n\n"
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
-	puts "🤖   4LFR3D:\n".colorize(:light_blue)
-    puts "    Maintenant que tu es dans le dossier d'un voleur, édite son mot de passe.".colorize(:light_black)
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
-  end
+    def hint
+    puts "\n\n"
+    puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
+    puts "🤖   4LFR3D:\n".colorize(:light_blue)
+      puts "    C'est dans ce dossier que tu peux éditer le mot de passe d'un des voleurs admins grâce à la commande ".colorize(:light_black) + "edit mdp".colorize(:light_yellow) + ".".colorize(:light_black)
+    puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
+    end
 end
 
 
