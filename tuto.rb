@@ -26,14 +26,14 @@ class Tuto
     a = Artii::Base.new
     puts a.asciify('- 4LFR3D -').colorize(:light_blue)
     introduction_str = "Bienvenue détective,\n\nJe suis 4LFR3D, l'intelligence artificielle d'assistance aux détectives privés.\n\n"
-    introduction_str += "Votre mission est de localiser le légendaire voleur de diamant \"Charly\" et ses deux complices grâce à vos talents de déduction, mais aussi informatiques.\n\n"
+    introduction_str += "Votre mission est de localiser un légendaire voleur de diamant et ses deux complices grâce à vos talents de déduction, mais aussi informatiques.\n\n"
     introduction_str += "En effet, lors de son dernier casse à la place Vendôme, ce dernier a laissé tomber son sac dans lequel se trouvait son ordinateur portable.\n\n"
     introduction_str += "Bien évidemment, ce voleur de légende sait couvrir ses traces, et accéder à ses données ne sera pas chose aisée!\n\n"
     introduction_str += "\nVos instructions sont les suivantes:\n\n"
     introduction_str += " - Dans un premier temps, vous devrez vous connecter à son ordinateur et vérifer qu'aucunes de vos données n'ont été collectées.\n\n"
     introduction_str += " - Une fois cela fait, il faudra changer le mot de passe d'un des admins pour s'échauffer.\n\n"
     introduction_str += " - Ensuite, il faudra donner un faux rendez-vous à ses deux complices dans un lieu où la police les attendra en leur envoyant un email.\n\n"
-    introduction_str += " - Enfin, il faudra rentrer dans la gestion de système de l'ordinateur pour désactiver les différents systèmes de sécurité et localiser Charly!\n\n"
+    introduction_str += " - Enfin, il faudra rentrer dans la gestion de système de l'ordinateur pour désactiver les différents systèmes de sécurité et localiser le voleur!\n\n"
     introduction_str += "\n\nAllez! Il est temps de se lancer.\n"
     introduction_str += "Quel identifiant souhaites-tu essayer pour te connecter à son ordinateur?"
     display_letters(introduction_str)
