@@ -70,7 +70,7 @@ class HelpCommand
 
           -> #{"chmod".colorize(:green)} : modifie les permissions d'accès au fichier indiqué.
 
-            * Utilise la commande "chmod +r" pour te donner les droits de lecture du fichier.
+            * Utilise la commande #{"chmod +r".colorize(:green)} pour te donner les droits de lecture du fichier.
 
           -> #{"mail".colorize(:green)} : envoie un email au destinataire spécifié en paramètre
 

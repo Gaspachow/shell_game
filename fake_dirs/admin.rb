@@ -13,7 +13,9 @@ class AdminPwdDir < FakeDir
 	puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
 	puts "🤖   4LFR3D:\n".colorize(:light_blue)
     puts "    Dans ce dossier, tu vas pouvoir trouver le mot de passe pour accéder à \n".colorize(:light_black)
-    puts "    l'administration de la gestion de l'ordinateur du voleur. Les fichiers sont peut-être cachés...".colorize(:light_black)
+    puts "    l'administration de la gestion de l'ordinateur du voleur.\n".colorize(:light_black)
+    puts "    Les fichiers sont peut-être cachés...\n\n".colorize(:light_black)
+    puts "    N'oublie pas que s'il te manque des droits de lecture, tu peux toujours utiliser ".colorize(:light_black) + "chmod +r".colorize(:light_yellow) + " comme indiqué dans la partie ".colorize(:light_black) + "aide".colorize(:light_yellow) + ".".colorize(:light_black)
 	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 end
@@ -138,6 +140,7 @@ class AdminPartDir < FakeDir
     elem[:content] += "Sécurité VPN activée = Oui\n"
     elem[:content] += "Encryptage avancé des données = Oui\n"
     elem[:content] += "Niveau de sécurité Anti-Triangulation = 10\n"
+    elem[:content] += "\n\n---- POUR SORTIR DU FICHIER, APPUYEZ SUR CTRL+X ----"
   end
 
   def mails_sent?
