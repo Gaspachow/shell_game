@@ -42,7 +42,7 @@ class HelpCommand
                ==================================================================
         
         
-          -> #{"4lfr3d".colorize(:green)} : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
+          -> #{"alfred".colorize(:green)} : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
         
           -> #{"cat".colorize(:green)} : affiche sur le terminal le contenu du fichier passé en paramètre.
           
