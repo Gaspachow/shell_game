@@ -176,7 +176,9 @@ class Shell
       if pwd && pwd != $admin_part_dir.password
         puts "Mauvais mot de passe"
       else
-        $current_dir.cd(["admin_part"])
+        if pwd == $admin_part_dir.password
+          $current_dir.cd(["admin_part"])
+        end
       end
     end
   end
