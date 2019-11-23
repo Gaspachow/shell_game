@@ -13,7 +13,7 @@ class Hint
 	h = "\n\n"
 	h += "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	h += "🤖   4LFR3D:\n".colorize(:light_blue)
-	h += "    Maintenant que tu as ajouté ton identifiant (#{name}) à la liste des utilisateurs autorisés, tu peux le retaper pour rentrer dans le système !".colorize(:light_black)
+	h += "    Maintenant que tu as ajouté ton identifiant (".colorize(:light_black) + "#{name}".colorize(:green) + ") à la liste des utilisateurs autorisés, tu peux le retaper pour rentrer dans le système !".colorize(:light_black)
 	h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 

@@ -17,6 +17,7 @@ require 'colorize'
 require 'time'
 # require 'faker'
 require 'securerandom'
+include ERB::Util
 # require "i18n"
 
 
