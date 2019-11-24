@@ -43,7 +43,7 @@ class HelpCommand
                ==================================================================
         
         
-          -> #{"4lfr3d".colorize(:green)} : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
+          -> #{"alfred".colorize(:green)} : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
         
           -> #{"cat".colorize(:green)} : affiche sur le terminal le contenu du fichier passé en paramètre.
           
@@ -71,12 +71,12 @@ class HelpCommand
 
           -> #{"chmod".colorize(:green)} : modifie les permissions d'accès au fichier indiqué.
 
-            * Utilise la commande "chmod +r" pour te donner les droits de lecture du fichier.
+            * Utilise la commande #{"chmod +r".colorize(:green)} pour te donner les droits de lecture du fichier.
 
           -> #{"mail".colorize(:green)} : envoie un email au destinataire spécifié en paramètre
 
           -> #{"status".colorize(:green)} : donne l'état de sécurité de l'ordinateur (ne fonctionne que dans la partie gestion de l'ordinateur.)
 
-          -> #{"localisation".colorize(:green)} : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.))
+          -> #{"localiser".colorize(:green)} : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.))
     end
 end

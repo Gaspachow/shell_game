@@ -13,7 +13,7 @@ class Hint
 	h = "\n\n"
 	h += "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
 	h += "🤖   4LFR3D:\n".colorize(:light_blue)
-	h += "    Maintenant que tu as ajouté ton identifiant (#{name}) à la liste des utilisateurs autorisés, tu peux le retaper pour rentrer dans le système !".colorize(:light_black)
+	h += "    Maintenant que tu as ajouté ton identifiant (".colorize(:light_black) + "#{name}".colorize(:green) + ") à la liste des utilisateurs autorisés, tu peux le retaper pour rentrer dans le système !".colorize(:light_black)
 	h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 
@@ -148,7 +148,7 @@ class HelpCommands
     h += "   et de t'expliquer tout ce que tu peux faire.\n".colorize(:light_yellow)
     h += "   Rappelle-toi des commandes que tu as déjà vues :".colorize(:light_yellow) +" ls, cat, edit, rm, cd\n".colorize(:red)
 	h += "   Quand tu rentres dans un nouveau dossier, n'hésite pas à taper ".colorize(:light_yellow) + "ls".colorize(:red) + " pour voir tout ce qu'il contient !".colorize(:light_yellow)
-	h += "\n\n   Tu peux aussi m'appeler quand tu es un peu perdu en utilisant la commande ".colorize(:light_blue) + "4lfr3d".colorize(:green)
+	h += "\n\n   Tu peux aussi m'appeler quand tu es un peu perdu en utilisant la commande ".colorize(:light_blue) + "alfred".colorize(:green)
     h += "\n____________________________________________________________________________________________________________________________________________________________________________________\n\n\n".colorize(:light_black)
   end
 end

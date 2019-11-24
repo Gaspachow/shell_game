@@ -17,6 +17,7 @@ require 'colorize'
 require 'time'
 # require 'faker'
 require 'securerandom'
+include ERB::Util
 # require "i18n"
 
 
@@ -162,6 +163,8 @@ class Shell
       $current_dir.mail(cmd_args)
     when 'progres'
       $home_dir.progres
+    when 'exit'
+      puts 'Exit'
     else
       puts "La commande a mal été formulée."
     end
@@ -176,11 +179,17 @@ class Shell
       if pwd && pwd != $admin_part_dir.password
         puts "Mauvais mot de passe"
       else
-        $current_dir.cd(["admin_part"])
+        if pwd == $admin_part_dir.password
+          $current_dir.cd(["admin_part"])
+        end
       end
     end
   end
 end
+
+trap 'INT' do
+end
+
 
 Tuto.new
 @shell = Shell.new
