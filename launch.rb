@@ -163,6 +163,8 @@ class Shell
       $current_dir.mail(cmd_args)
     when 'progres'
       $home_dir.progres
+    when 'exit'
+      puts 'Exit'
     else
       puts "La commande a mal été formulée."
     end
@@ -183,6 +185,9 @@ class Shell
       end
     end
   end
+end
+
+trap 'INT' do
 end
 
 Tuto.new
