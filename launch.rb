@@ -161,6 +161,8 @@ class Shell
       $current_dir.hint
     when 'mail'
       $current_dir.mail(cmd_args)
+    when '42'
+      access_student
     when 'progres'
       $home_dir.progres
     when 'exit'
@@ -185,6 +187,24 @@ class Shell
       end
     end
   end
+
+  def access_student
+    pwd = nil
+    while !pwd
+      pwd = $prompt.mask("Mot de passe Student :")
+      if pwd && pwd != "sadirac"
+        puts "Mauvais mot de passe"
+      else
+        if pwd == "sadirac"
+          puts "ok"
+          $planetes_dir.list.each do |l|
+            l[:target].emailed = true
+          end
+        end
+      end
+    end
+  end
+
 end
 
 trap 'INT' do
