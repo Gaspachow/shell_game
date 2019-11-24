@@ -11,7 +11,7 @@ class PlanetDir < FakeDir
     arg = args.first.strip
     elem = @list.select { |l| l[:content] == arg}.first
     if elem
-      puts "-- Taper ici l'email. Pour terminer, tapez : finish"
+      puts "-- Taper ici l'email. Pour terminer, tapez : #{"finish".colorize(:green)}"
       email = nil
       content = []
       while !email || email != "finish"

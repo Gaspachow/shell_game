@@ -27,9 +27,9 @@ class HelpCommand
           En dernière partie, tu trouveras la liste des commnandes importantes que tu pourras utiliser.)
           ret += "\n\n    I / LES ETAPES\n"
 
-          ret += "        - Aller dans le dossier #{"securite".colorize(:green)}, recuperer puis changer le mot de passe d'au moins un administrateur\n\n"
+          ret += "        - Aller dans le dossier #{"securite".colorize(:green)}, recuperer le mot de passe d'un admin dans le dossier #{"mot_de_passe".colorize(:green)} puis changer le mot de passe d'au moins un administrateur dans le dossier #{"admins".colorize(:green)}\n\n"
           
-          ret += "        - Aller dans le dossier #{"partenaires".colorize(:green)} et envoyer un mail aux collaborateurs du voleur pour les rassembler à un rendez-vous avec la police.\n\n"
+          ret += "        - Aller dans le dossier #{"associes".colorize(:green)} et envoyer un mail aux collaborateurs du voleur pour les rassembler à un rendez-vous avec la police.\n\n"
           
           ret += "        - Aller dans le dossier #{"admin".colorize(:green)} et récupérer le mot de passe qui permettra d'accéder à la gestion de l'ordinateur du voleur.\n\n"
           
