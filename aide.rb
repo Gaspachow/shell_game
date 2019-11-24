@@ -17,6 +17,7 @@ class HelpCommand
         
                   ).colorize(:light_blue)
         ret += %q(                                AIDE).colorize(:light_green)
+        ret += "\n                                        Control + q pour quitter".colorize(:light_green)
         ret += %q(
 
           Tu trouveras ici des informations qui t'aideront pendant toute l'enquête.
@@ -26,7 +27,7 @@ class HelpCommand
           En dernière partie, tu trouveras la liste des commnandes importantes que tu pourras utiliser.)
           ret += "\n\n    I / LES ETAPES\n"
 
-          ret += "        - Aller dans le dossier #{"securite".colorize(:green)} et changer le mot de passe d'au moins un administrateur\n\n"
+          ret += "        - Aller dans le dossier #{"securite".colorize(:green)}, recuperer puis changer le mot de passe d'au moins un administrateur\n\n"
           
           ret += "        - Aller dans le dossier #{"partenaires".colorize(:green)} et envoyer un mail aux collaborateurs du voleur pour les rassembler à un rendez-vous avec la police.\n\n"
           

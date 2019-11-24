@@ -144,8 +144,8 @@ class Shell
     when 'edit'
       $current_dir.edit(cmd_args)
     when 'aide'
-      puts($help_dis.edit)
-      #system "less aide" debate whether we keep less aide or help_disp
+      File.write('aide_couleur', $help_dis.edit)
+      system "less -r aide_couleur"
     when 'status'
       $current_dir.status
     when 'admin'
