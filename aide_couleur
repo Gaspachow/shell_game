@@ -1,0 +1,77 @@
+[0;94;49m
+                                            __________________
+                                          .-'  \ _.-''-._ /  '-.
+                                        .-/\   .'.      .'.   /\-.
+                                      _'/  \.'   '.  .'   './  \'_
+                                      :======:======::======:======:
+                                      '. '.  \     ''     /  .' .'
+                                        '. .  \   :  :   /  . .'
+                                          '.'  \  '  '  /  '.'
+                                            ':  \:    :/  :'
+                                              '. \    / .'
+                                                '.\  /.'
+                                                  '\/'
+        
+        
+                  [0m[0;92;49m                                AIDE[0m[0;92;49m
+                                        Control + q pour quitter[0m
+
+          Tu trouveras ici des informations qui t'aideront pendant toute l'enquête.
+          
+          En première partie, tu trouveras des indications sur les étapes à effectuer pour retrouver le voleur et le diamant.
+          
+          En dernière partie, tu trouveras la liste des commnandes importantes que tu pourras utiliser.
+
+    I / LES ETAPES
+        - Aller dans le dossier [0;32;49msecurite[0m, récupérer puis changer le mot de passe de l'utilisateur [0;32;49mroot[0m.
+
+        - Aller dans le dossier [0;32;49massocies[0m et envoyer un mail aux collaborateurs du voleur pour les rassembler à un rendez-vous avec la police.
+
+        - Aller dans le dossier [0;32;49madmin[0m et récupérer le mot de passe qui permettra d'accéder à la gestion de l'ordinateur du voleur.
+
+        - Accéder à la partie [0;32;49mgestion du système[0m avec la commande [0;32;49madmin[0m et localiser où le voleur se cache avec le diamant, pour enfin envoyer sa position à la police.
+
+    II / LES COMMANDES
+
+          Utilisation des commandes :
+        
+               ==================================================================
+              |      commande + paramètre1 + ...(paramètre2 + paramètre3)...    |
+               ==================================================================
+        
+        
+          -> [0;32;49malfred[0m : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
+        
+          -> [0;32;49mcat[0m : affiche sur le terminal le contenu du fichier passé en paramètre.
+          
+          -> [0;32;49mls[0m : affiche l'ensemble des fichiers contenus dans le répertoire indiqué.
+
+            * Si l'option "-a" est donnée en paramètre, tous les fichiers du repertoire
+              indiqué vont s'afficher, ainsi que les fichiers et dossiers cachés.
+
+          -> [0;32;49mcd[0m : change le répertoire en cours d'utilisation pour aller dans le
+              repertoire passé en paramètre.
+
+            * Si le chemin ".." est donné en paramètre, le nouveau répertoire
+              sera le répertoire parent (le répertoire précédent).
+
+          -> [0;32;49medit[0m : ouvre l'éditeur de texte pour permettre la modification du
+                fichier passé en paramètre.
+
+            * Pour enregistrer, il faut faire CTRL + X
+
+          -> [0;32;49madmin[0m : permet d'accéder à l'espace de gestion de l'ordinateur du voleur.
+
+          -> [0;32;49mrm[0m : supprime le fichier passé en paramètre.
+
+          -> [0;32;49maide[0m : ouvre le centre d'aide.
+
+          -> [0;32;49mchmod[0m : modifie les permissions d'accès au fichier indiqué.
+
+            * Utilise la commande [0;32;49mchmod +r[0m pour te donner les droits de lecture du fichier.
+
+          -> [0;32;49mmail[0m : envoie un email au destinataire spécifié en paramètre
+
+          -> [0;32;49mstatus[0m : donne l'état de sécurité de l'ordinateur (ne fonctionne que dans la partie gestion de l'ordinateur.)
+
+          -> [0;32;49mlocaliser[0m : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.)

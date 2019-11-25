@@ -86,6 +86,7 @@ class AdminPartDir < FakeDir
   end
 
   def destroy_ship
+    (puts "Il faut d'abord modifier le mot de passe d'un administrateur."; return) if !mdp_changed?
     (puts "Il faut d'abord envoyer un mail aux associés du voleur et leur donner un rendez-vous surprise avec la police." ; return) if !mails_sent?
     if @localized
       puts "\nLe voleur a déjà été arrêté, félicitations.\n"
@@ -148,6 +149,11 @@ class AdminPartDir < FakeDir
       return false unless l[:target].emailed
     end
     true
+  end
+
+  def mdp_changed?
+    return true unless $admins[20][:password] == "E2R5"
+    false
   end
 
 end

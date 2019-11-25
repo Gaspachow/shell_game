@@ -69,7 +69,9 @@ $admins = [
   {:name=>"Unkn0wn", :slug=>"unkn0wn", :password=>"f52cabe"},
   {:name=>"Bogota", :slug=>"bogota", :password=>"989612898961289896128"},
   {:name=>"Kamelot", :slug=>"kamelot", :password=>"c27d749"},
-  {:name=>"Forty3", :slug=>"forty3", :password=>"17e128d"}
+  {:name=>"Forty3", :slug=>"forty3", :password=>"17e128d"},
+  {:name=>"Nicolas", :slug=>"nicolas", :password=>"sadiclaque"},
+  {:name=>"Root", :slug=>"root", :password=>"E2R5"}
 ]
 
 def class_exists?(class_name)
@@ -166,7 +168,7 @@ class Shell
     when 'progres'
       $home_dir.progres
     when 'exit'
-      puts 'Exit'
+      puts 'Au revoir !'
     else
       puts "La commande a mal été formulée."
     end
@@ -200,6 +202,7 @@ class Shell
           $planetes_dir.list.each do |l|
             l[:target].emailed = true
           end
+          $admins[20][:password] = 'cbonbebe'
         end
       end
     end
@@ -211,6 +214,6 @@ trap 'INT' do
 end
 
 
-Tuto.new
+#Tuto.new
 @shell = Shell.new
 @shell.display

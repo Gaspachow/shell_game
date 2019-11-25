@@ -30,7 +30,7 @@ class AdminDir < FakeDir
       f = File.read(filename)
       new_cont = f.split.first
       unless !new_cont || new_cont.empty?
-        $admins[16][:password] = new_cont
+        $admins[20][:password] = new_cont
         elem.first[:content] = new_cont
         @password = new_cont
       end
@@ -40,31 +40,21 @@ class AdminDir < FakeDir
     end
   end
 
-    def hint
+  def hint
     puts "\n\n"
     puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
-    puts "🤖   4LFR3D:\n".colorize(:light_blue)
-      puts "    C'est dans ce dossier que tu peux éditer le mot de passe d'un des voleurs admins grâce à la commande ".colorize(:light_black) + "edit mdp".colorize(:light_yellow) + ".".colorize(:light_black)
+    puts "🤖   4LFR3D:\n".colorize(:light_blue)   
+    puts "   Bravo !\n"
+    puts "   Tu as accedé au dossier, tu n'a plus qu'a modifer le mot de passe !"
     puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
-    end
+  end
 end
 
-
-
-class PasswordsDir < FakeDir
+class RootDir < FakeDir
   def initialize
-    @path = "Mots de passe"
+    @path = "Root"
     @list = []
-    set_list
-  end
-
-  def hint
-	puts "\n\n"
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
-	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
-    puts "    C'est dans ce dossier que tu vas pouvoir trouver les mots de passe des\n".colorize(:light_black)
-    puts "    voleurs afin d'entrer dans leur dossier.".colorize(:light_black)
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
+		@list.each { |l| l[:target].parent_dir = self }
   end
 
   private
@@ -75,66 +65,29 @@ class PasswordsDir < FakeDir
   end
 end
 
-class AdminsDir < FakeDir
-  def initialize
-    @path = "Admins"
-    populate_admins
-    @list = [
-	  {:name=>"Chipeur", :slug=>"chipeur", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Joker", :slug=>"joker", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Arist0t3", :slug=>"arist0t3", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Bowser", :slug=>"bowser", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Megamind", :slug=>"megamind", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Farqu4d", :slug=>"farqu4d", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Mojo", :slug=>"mojo", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Jojo", :slug=>"jojo", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Dante", :slug=>"dante", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Roger", :slug=>"roger", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Hercule", :slug=>"hercule", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Drevil", :slug=>"drevil", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Palerme", :slug=>"palerme", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Rio", :slug=>"rio", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"1p0", :slug=>"1p0", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Unkn0wn", :slug=>"unkn0wn", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Bogota", :slug=>"bogota", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Kamelot", :slug=>"kamelot", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
-	  {:name=>"Forty3", :slug=>"forty3", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true}
-	]
-    @list.each { |l| l[:target] = "Admin#{l[:name]}".constantize.new}
-    @list.each { |l| l[:target].parent_dir = self }
-  end
-
-  def hint
-	puts "\n\n"
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
-	puts "🤖   4LFR3D:\n".colorize(:light_blue) 
-    puts "    Ici, tu peux accéder au dossier personnel des voleurs...\n".colorize(:light_black)
-    puts "    ... si tu as le bon mot de passe.".colorize(:light_black)
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
-  end
-end
-
 
 
 class SecurityDir < FakeDir
   def initialize
-    $admins_dir = AdminsDir.new
-    $passwords_dir = PasswordsDir.new
     @path = "Securite"
+    populate_admins
     @list = [
-      {name: "Mot de passe", slug: "mot_de_passe", locked: false, removable: false, kind: :dir, target: $passwords_dir},
-      {name: "Admins", slug: "admins", locked: false, removable: false, kind: :dir, target: $admins_dir},
+			{:name=>"Root", :slug=>"root", :removable=>false, :locked=>false, :kind=>:dir, pwd_needed: true},
+			{:name=>"Root", :slug=>".root_mdp", :removable=>false, :locked=>false, :kind=>:file, pwd_needed: false, hidden: true},
     ]
-    @list.each { |l| l[:target].parent_dir = self }
+    @list.each { |l| l[:target] = "Admin#{l[:name]}".constantize.new}
+		@list.each { |l| l[:target].parent_dir = self }
+		@list.each { |l| l[:content] = "E2R5"}
+
   end
 
   def hint
-	puts "\n\n"
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
-	puts "🤖   4LFR3D:\n".colorize(:light_blue)
-    puts "    Dans ce dossier, tu peux aller changer le mot de passe des voleurs\n".colorize(:light_black)
-    puts "    pour qu'ils ne puissent plus se connecter à leur session.".colorize(:light_black)
-	puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
+    puts "\n\n"
+    puts "____________________________________________________________________________________________________________________________________________________________________________________\n".colorize(:light_black)
+    puts "🤖   4LFR3D:\n".colorize(:light_blue)   
+    puts "    Conseil : Ici, juste un dossier avec un mot de passe...\n"
+		puts "    Mais comment avoir le mot de passe du dossier ?!"
+		puts "    ... Qui sait, les fichiers sont peut-être cachés ..."
+    puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
-
 end
