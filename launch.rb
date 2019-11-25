@@ -47,6 +47,10 @@ def display_letters str, speed=nil
   str.split("").each do |c|
     print c
     sleep(speed)
+    if $kill_display
+      $kill_display = false
+      break
+    end
   end
 end
 
@@ -211,6 +215,7 @@ class Shell
 end
 
 trap 'INT' do
+  $kill_display = true
 end
 
 
