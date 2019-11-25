@@ -36,7 +36,7 @@ class Tuto
     introduction_str += " - Enfin, il faudra rentrer dans la gestion de système de l'ordinateur pour désactiver les différents systèmes de sécurité et localiser le voleur!\n\n"
     introduction_str += "\n\nAllez! Il est temps de se lancer.\n"
     introduction_str += "Quel identifiant souhaites-tu essayer pour te connecter à son ordinateur?"
-    display_letters(introduction_str)
+    display_letters(introduction_str, 1.0 / 75)
     answer = nil
     puts "\n\n"
     while !answer
@@ -60,7 +60,7 @@ class Tuto
 
     tuto_prompt("", "edit autorisations")
 
-    user_name = (add_self_name.first.split(' ').first).tr('.,()\/;:"\'-_=+*&|!@%^()', '').downcase()
+    user_name = (add_self_name.first.split(' ').first.downcase).tr('.,()\/;:"\'-_=+*&|!@%^()', '')
     new_user_class({ name: user_name, blood: "$" + rand(15000..35000).to_s, code_cb: ((0...8).map { (65 + rand(26)) }.join), age: rand(11..16), :address=>"5399 Passage Mouffetard - 49560 - Toulouse", :phone=>"06 38 06 96 61"})
     $current_user = "User#{user_name.camelize}".constantize.new
 
