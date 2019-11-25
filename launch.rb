@@ -219,6 +219,6 @@ trap 'INT' do
 end
 
 
-Tuto.new
+Tuto.new unless (ARGV[0] == '--skip' || ARGV[0] == '-s')
 @shell = Shell.new
 @shell.display
