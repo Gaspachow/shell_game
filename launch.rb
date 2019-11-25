@@ -214,6 +214,6 @@ trap 'INT' do
 end
 
 
-#Tuto.new
+Tuto.new
 @shell = Shell.new
 @shell.display
