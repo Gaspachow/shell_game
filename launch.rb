@@ -121,12 +121,12 @@ class Shell
   end
 
   def display
-	args = nil
-	while !args || args.strip != "exit"
-	  args = $prompt.ask("$ #{$current_dir.path} >") do |q|
-		if args
-         # q.modify   :down
-		end
+    args = nil
+    while !args || args.strip != "exit"
+      args = $prompt.ask("$ #{$current_dir.path} >") do |q|
+        if args
+          # q.modify   :down
+        end
       end
       command_parse(args) if args
     end
@@ -201,12 +201,19 @@ class Shell
       if pwd && pwd != "sadirac"
         puts "Mauvais mot de passe"
       else
-        if pwd == "sadirac"
-          puts "ok"
-          $planetes_dir.list.each do |l|
-            l[:target].emailed = true
-          end
+        step = $prompt.ask("A quelle etape voulez-vous sauter ?\n1 - Mot de passse\n2 - Mails\n3 - Securite\n -> ")
+        case step
+        when '1'
           $admins[20][:password] = 'cbonbebe'
+        when '2'
+          $admins[20][:password] = 'cbonbebe'
+          $planetes_dir.list.each { |l| l[:target].emailed = true }
+        when '3'
+          $admins[20][:password] = 'cbonbebe'
+          $planetes_dir.list.each { |l| l[:target].emailed = true }
+          $admin_part_dir.securite_vpn_activee = false
+          $admin_part_dir.encryptage_avance_des_donnees = false
+          $admin_part_dir.niveau_de_securite_anti_triangulation = 0
         end
       end
     end

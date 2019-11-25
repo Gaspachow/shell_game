@@ -50,7 +50,7 @@ class HomeDir < FakeDir
   end
 
   def mdp_changed?
-    return true unless $admins[16][:password] == "989612898961289896128"
+    return true unless $admins[20][:password] == "E2R5"
     false
   end
 end
