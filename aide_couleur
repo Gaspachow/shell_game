@@ -42,25 +42,25 @@
         
           -> [0;32;49malfred[0m : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
         
-          -> [0;32;49mcat[0m : affiche sur le terminal le contenu du fichier passé en paramètre.
+          -> [0;32;49mcat[0m : affiche le contenu du fichier passé en paramètre.
           
-          -> [0;32;49mls[0m : affiche l'ensemble des fichiers contenus dans le répertoire indiqué.
+          -> [0;32;49mls[0m : affiche l'ensemble des fichiers contenus dans le dossier courant.
 
-            * Si l'option "-a" est donnée en paramètre, tous les fichiers du repertoire
+            * Si l'option " -a" est donnée en paramètre, tous les fichiers du repertoire
               indiqué vont s'afficher, ainsi que les fichiers et dossiers cachés.
 
-          -> [0;32;49mcd[0m : change le répertoire en cours d'utilisation pour aller dans le
-              repertoire passé en paramètre.
+          -> [0;32;49mcd[0m : change le dossier courant pour aller dans le
+              dossier passé en paramètre.
 
-            * Si le chemin ".." est donné en paramètre, le nouveau répertoire
-              sera le répertoire parent (le répertoire précédent).
+            * Si le chemin " .." est donné en paramètre, le nouveau dossier
+              sera le répertoire le répertoire précédent.
 
           -> [0;32;49medit[0m : ouvre l'éditeur de texte pour permettre la modification du
                 fichier passé en paramètre.
 
-            * Pour enregistrer, il faut faire CTRL + X
+        ->  [0;31;49m* Pour enregistrer, il faut faire Control + x.[0m
 
-          -> [0;32;49madmin[0m : permet d'accéder à l'espace de gestion de l'ordinateur du voleur.
+          -> [0;32;49madmin[0m : permet d'acceder à l'espace sécurisé de gestion du vaisseau.
 
           -> [0;32;49mrm[0m : supprime le fichier passé en paramètre.
 

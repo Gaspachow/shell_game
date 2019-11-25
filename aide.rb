@@ -45,38 +45,38 @@ class HelpCommand
         
           -> #{"alfred".colorize(:green)} : Demande à 4LFR3D de te donner des indices sur ce qui devrait être fait dans ce dossier.
         
-          -> #{"cat".colorize(:green)} : affiche sur le terminal le contenu du fichier passé en paramètre.
+          -> #{"cat".colorize(:green)} : affiche le contenu du fichier passé en paramètre.
           
-          -> #{"ls".colorize(:green)} : affiche l'ensemble des fichiers contenus dans le répertoire indiqué.
+          -> #{"ls".colorize(:green)} : affiche l\'ensemble des fichiers contenus dans le dossier courant.
 
-            * Si l'option "-a" est donnée en paramètre, tous les fichiers du repertoire
-              indiqué vont s'afficher, ainsi que les fichiers et dossiers cachés.
+            * Si l'option " -a" est donnée en paramètre, tous les fichiers du repertoire
+              indiqué vont s\'afficher, ainsi que les fichiers et dossiers cachés.
 
-          -> #{"cd".colorize(:green)} : change le répertoire en cours d'utilisation pour aller dans le
-              repertoire passé en paramètre.
+          -> #{"cd".colorize(:green)} : change le dossier courant pour aller dans le
+              dossier passé en paramètre.
 
-            * Si le chemin ".." est donné en paramètre, le nouveau répertoire
-              sera le répertoire parent (le répertoire précédent).
+            * Si le chemin " .." est donné en paramètre, le nouveau dossier
+              sera le répertoire le répertoire précédent.
 
-          -> #{"edit".colorize(:green)} : ouvre l'éditeur de texte pour permettre la modification du
+          -> #{"edit".colorize(:green)} : ouvre l\'éditeur de texte pour permettre la modification du
                 fichier passé en paramètre.
 
-            * Pour enregistrer, il faut faire CTRL + X
+        ->  #{"* Pour enregistrer, il faut faire Control + x.".colorize(:red)}
 
-          -> #{"admin".colorize(:green)} : permet d'accéder à l'espace de gestion de l'ordinateur du voleur.
+          -> #{"admin".colorize(:green)} : permet d\'acceder à l\'espace sécurisé de gestion du vaisseau.
 
           -> #{"rm".colorize(:green)} : supprime le fichier passé en paramètre.
 
-          -> #{"aide".colorize(:green)} : ouvre le centre d'aide.
+          -> #{"aide".colorize(:green)} : ouvre le centre d\'aide.
 
-          -> #{"chmod".colorize(:green)} : modifie les permissions d'accès au fichier indiqué.
+          -> #{"chmod".colorize(:green)} : modifie les permissions d\'accès au fichier indiqué.
 
             * Utilise la commande #{"chmod +r".colorize(:green)} pour te donner les droits de lecture du fichier.
 
           -> #{"mail".colorize(:green)} : envoie un email au destinataire spécifié en paramètre
 
-          -> #{"status".colorize(:green)} : donne l'état de sécurité de l'ordinateur (ne fonctionne que dans la partie gestion de l'ordinateur.)
+          -> #{"status".colorize(:green)} : donne l\'état de sécurité de l\'ordinateur (ne fonctionne que dans la partie gestion de l\'ordinateur.)
 
-          -> #{"localiser".colorize(:green)} : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l'ordinateur.))
+          -> #{"localiser".colorize(:green)} : tente de localiser le voleur du diamant (ne fonctionne que dans la partie gestion de l\'ordinateur.))
     end
 end
