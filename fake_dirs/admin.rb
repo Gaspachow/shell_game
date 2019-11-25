@@ -153,7 +153,7 @@ class AdminPartDir < FakeDir
 
   def mdp_changed?
     return true unless $admins[20][:password] == "E2R5"
-    false
+    true
   end
 
 end
