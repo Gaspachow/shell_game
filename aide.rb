@@ -17,7 +17,7 @@ class HelpCommand
         
                   ).colorize(:light_blue)
         ret += %q(                                AIDE).colorize(:light_green)
-        ret += "\n                                        Control + q pour quitter".colorize(:light_green)
+        ret += "\n                                                  q pour quitter".colorize(:light_green)
         ret += %q(
 
           Tu trouveras ici des informations qui t'aideront pendant toute l'enquête.
