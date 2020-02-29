@@ -12,3 +12,4 @@ This project is an adaptation from the shell game https://github.com/bnoufel/sav
 - cjaimes
 - tpons
 - gsmets
+- thzeribi
