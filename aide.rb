@@ -63,7 +63,7 @@ class HelpCommand
 
         ->  #{"* Pour enregistrer, il faut faire Control + x.".colorize(:red)}
 
-          -> #{"admin".colorize(:green)} : permet d\'acceder à l\'espace sécurisé de gestion du vaisseau.
+          -> #{"admin".colorize(:green)} : permet d\'acceder à l\'espace sécurisé de gestion du systeme.
 
           -> #{"rm".colorize(:green)} : supprime le fichier passé en paramètre.
 
