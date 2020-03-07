@@ -169,8 +169,8 @@ class Shell
       $current_dir.mail(cmd_args)
     when '42'
       access_student
-    when 'progres'
-      $home_dir.progres
+    when 'progress'
+      $home_dir.progress
     when 'exit'
       puts 'Au revoir !'
     else

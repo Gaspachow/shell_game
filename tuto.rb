@@ -175,6 +175,9 @@ class Tuto
     diff = file_logins.sort - @auth_logins.sort
     if @auth_logins.count >= file_logins.count || diff.count > 1
       File.open("autorisations", "w+") {|fi| fi.puts @auth_logins.map {|l| l} }
+      screen_clear
+      puts @hint.invalid_login
+      $prompt.ask("Appuie sur entrée pour continuer...")
       diff = add_self_name
     end
     File.delete("autorisations") if File.exist?("autorisations")

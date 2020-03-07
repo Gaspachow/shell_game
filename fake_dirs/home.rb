@@ -22,7 +22,7 @@ class HomeDir < FakeDir
     puts "____________________________________________________________________________________________________________________________________________________________________________________\n\n".colorize(:light_black)
   end
 
-  def progres
+  def progress
     puts "\n🤖 4LFR3D:".colorize(:light_blue)
     if !mdp_changed?
       puts "Mot de passe d'un administrateur changé : " + " non".colorize(:red)

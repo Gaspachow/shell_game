@@ -111,6 +111,7 @@ class AdminPartDir < FakeDir
       puts a.asciify('MISSION REUSSIE!').colorize(:green)
       puts "\n\n\n"
       $current_dir = $home_dir
+      system "cat charly.less"
       $prompt.ask("Félicitations!\nLe voleur de diamant a été arrêté et identifié par la police! Il s'agirait du légendaire \"Charly\", mondialement connu pour ses talents de cache-cache.\nLa police tient à te remercier personnellement et espère pouvoir faire appel à tes talents dans le futur.\nAppuie sur entrée pour continuer ")
     else
       puts "\nLe système de sécurité est trop élevé pour localiser le voleur!\n\n"
