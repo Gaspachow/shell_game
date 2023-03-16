@@ -1,6 +1,6 @@
 source 'http://rubygems.org' do
   gem 'tty-prompt'
-  gem 'activesupport', '~> 5.0'
+  gem 'activesupport', '~> 6.1'
   gem 'whirly'
   gem 'paint'
   gem 'artii', '~> 2.1', '>= 2.1.1'
